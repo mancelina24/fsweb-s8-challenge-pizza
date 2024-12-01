@@ -4,3 +4,14 @@
   padding: 0;
   width: 100%;
 }
+
+.rating {
+  color: red;
+  font-weight: bold;
+}
+.r_age {
+  border: 1px solid black;
+  border-radius: 0.3rem;
+  padding: 0.2rem;
+  margin: 0 0.5rem;
+}
