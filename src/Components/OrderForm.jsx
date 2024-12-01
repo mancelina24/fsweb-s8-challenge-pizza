@@ -1,5 +1,5 @@
 import React from "react";
-import "./OrderForm.css";
+import "../App.css";
 import data from "../assets/data";
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
@@ -42,7 +42,7 @@ const OrderForm = () => {
             diğer malzemelerle kaplanmış, daha sonra geleneksel olarak odun
             ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle
             yuvarlak, düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan
-            kökenli lezzetli bir yemektir. . Küçük bir pizzaya bazen pizzetta
+            kökenli lezzetli bir yemektir. Küçük bir pizzaya bazen pizzetta
             denir.
           </p>
         </div>
@@ -62,9 +62,11 @@ const OrderForm = () => {
               value={data.hamur}
             >
               <option value="">Hamur Kalınlığı</option>
-              <option value="İnce">İnce</option>
-              <option value="Normal">Normal</option>
-              <option value="Kalın">Kalın</option>
+              {data.hamur.map((hamurTipi, i) => (
+                <option key={i} value={hamurTipi}>
+                  {hamurTipi}
+                </option>
+              ))}
             </select>
           </div>
         </div>

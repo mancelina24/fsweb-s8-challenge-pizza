@@ -6,10 +6,12 @@
 }
 
 body {
+  font-family: Roboto Condensed;
+  background-color: #f7fafc;
+  color: #333;
   margin: 0;
-  padding: 0;
 }
-
+/* HOME BÖLÜMÜ*/
 .home {
   background-image: url("/assets/Iteration-1-assets/home-banner.png");
   background-size: cover;
@@ -39,4 +41,34 @@ button {
 
 button:hover {
   background-color: #fdc913;
+}
+
+/* orderForm Bölümü*/
+.order-header {
+  background-color: #ce2829;
+  color: white;
+  padding: 10px;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-header a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.order-header a:hover {
+  color: #fdc913;
+}
+.rating {
+  color: red;
+  font-weight: bold;
+}
+.r_age {
+  border: 1px solid black;
+  border-radius: 0.3rem;
+  padding: 0.2rem;
+  margin: 0 0.5rem;
 }
