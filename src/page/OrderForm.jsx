@@ -2,8 +2,42 @@ import React from "react";
 import "../App.css";
 import data from "../assets/data";
 import { NavLink } from "react-router-dom";
+import useFormState from "../hooks/useState";
+import { Checkbox } from "../Components/Checkbox";
 
 const OrderForm = () => {
+  const {
+    boyut,
+    setBoyut,
+    hamur,
+    setHamur,
+    malzemeler,
+    setMalzemeler,
+    siparisNotu,
+    setSiparisNotu,
+  } = useFormState();
+
+  const handleBoyutChange = (e) => {
+    setBoyut(e.target.value);
+  };
+
+  const handleHamurChange = (e) => {
+    setHamur(e.target.value);
+  };
+  const handleCheckChange = (e) => {
+    const value = e.target.value;
+    const checked = e.target.checked;
+    if (checked) {
+      if (malzemeler.length < 5) {
+        setMalzemeler([...malzemeler, value]);
+      } else {
+        alert("En fazla 5 malzeme seçebilirsiniz!");
+      }
+    } else {
+      setMalzemeler(malzemeler.filter((item) => item !== value));
+    }
+  };
+
   return (
     <>
       <header class="order-header">
@@ -48,19 +82,25 @@ const OrderForm = () => {
         </div>
         <div>
           <div>
-            <label htmlFor="boyut">
-              <h3>Boyut Seç</h3>
-            </label>
+            <h3>Boyut Seç</h3>
+            {data.boyut.map((boyutTipi, i) => (
+              <div key={i}>
+                <label>
+                  <input
+                    type="radio"
+                    name="boyut"
+                    value={boyutTipi}
+                    checked={boyut === boyutTipi}
+                    onChange={handleBoyutChange}
+                  />
+                  {boyutTipi}
+                </label>
+              </div>
+            ))}
           </div>
           <div>
             <h3>Hamur Seç</h3>
-            <select
-              name="hamur"
-              onchange={(e) => {
-                e.target.value;
-              }}
-              value={data.hamur}
-            >
+            <select name="hamur" onChange={handleHamurChange} value={hamur}>
               <option value="">Hamur Kalınlığı</option>
               {data.hamur.map((hamurTipi, i) => (
                 <option key={i} value={hamurTipi}>
@@ -70,10 +110,21 @@ const OrderForm = () => {
             </select>
           </div>
         </div>
-        <div>
+
+        <div class="checkbox-container">
           <h3>Ek malzemeler</h3>
           <p>En fazla 10 malzeme seçebilirsiniz 5₺</p>
+          {data.malzemeler.map((value, i) => (
+            <Checkbox
+              key={i}
+              handleCheckChange={handleCheckChange}
+              isCheck={malzemeler.includes(value)}
+              value={value}
+              label={value}
+            />
+          ))}
         </div>
+
         <form action="">
           <h3>Sipariş Notu</h3>
           <input type="text" />
