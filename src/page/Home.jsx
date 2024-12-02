@@ -12,7 +12,7 @@ const Home = () => {
         <h2>KOD ACIKTIRIR</h2>
         <h2>PİZZA, DOYURUR</h2>
 
-        <Link to="/OrderForm">
+        <Link to="/orderform">
           <button>ACIKTIM</button>
         </Link>
       </div>

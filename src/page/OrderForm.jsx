@@ -1,20 +1,20 @@
 import React from "react";
 import "../App.css";
 import data from "../assets/data";
-import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import { NavLink } from "react-router-dom";
 
 const OrderForm = () => {
   return (
     <>
       <header class="order-header">
         <h1>Teknolojik Yemekler</h1>
-        <NavLink activeStyle={{ color: "green" }} exact to="/">
+        <NavLink activeStyle={{ color: "white" }} exact to="/">
           Anasayfa
         </NavLink>
-        <NavLink activeStyle={{ color: "green" }} exact to="/">
+        <NavLink activeStyle={{ color: "white" }} exact to="/">
           Seçenekler
         </NavLink>
-        <NavLink activeStyle={{ color: "green" }} exact to="/orderform">
+        <NavLink activeStyle={{ color: "white" }} exact to="/orderform">
           Sipariş Oluştur
         </NavLink>
       </header>

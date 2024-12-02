@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 
-import Home from "./Components/Home";
-import OrderSuccess from "./Components/OrderSuccess";
-import OrderForm from "./Components/OrderForm";
+import Home from "./page/Home";
+import OrderForm from "./page/OrderForm";
+import OrderSuccess from "./page/OrderSuccess";
 
 function App() {
   return (
