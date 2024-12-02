@@ -1,9 +1,11 @@
 import React from "react";
 import "../App.css";
+import "../css/orderform.css";
 import data from "../assets/data";
 import { NavLink, useHistory } from "react-router-dom";
 import useFormState from "../hooks/useState";
 import { Checkbox } from "../Components/Checkbox";
+import Header from "../Components/Header";
 
 const OrderForm = () => {
   const {
@@ -70,18 +72,18 @@ const OrderForm = () => {
   return (
     <>
       <header class="order-header">
-        <img src="/assets/Iteration-1-assets/logo.svg" alt="hansel" />
-        <NavLink activeStyle={{ color: "#FAF7F2" }} exact to="/">
+        <Header />
+        <NavLink exact to="/">
           Anasayfa
         </NavLink>
-        <NavLink activeStyle={{ color: "#FAF7F2" }} exact to="/">
+        <NavLink exact to="/">
           Seçenekler
         </NavLink>
-        <NavLink activeStyle={{ color: "#FAF7F2" }} exact to="/orderform">
+        <NavLink exact to="/orderform">
           Sipariş Oluştur
         </NavLink>
       </header>
-      <header>
+      <section>
         <div>Position Absolute Acı Pizza</div>
         <div>
           <div>{85.5 + "₺"}</div>
@@ -96,7 +98,7 @@ const OrderForm = () => {
             <span>(200)</span>
           </div>
         </div>
-      </header>
+      </section>
       <main>
         <div>
           <p>

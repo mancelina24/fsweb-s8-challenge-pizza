@@ -1,0 +1,28 @@
+.order-header {
+  background-color: #ce2829;
+  color: #faf7f2;
+  padding: 10px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-header a {
+  color: #faf7f2;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.order-header a:hover {
+  color: #fdc913;
+}
+.rating {
+  color: red;
+  font-weight: bold;
+}
+.r_age {
+  border: 1px solid black;
+  border-radius: 0.3rem;
+  padding: 0.2rem;
+  margin: 0 0.5rem;
+}
