@@ -105,47 +105,78 @@ header {
   width: 40%; /* Sayfanın %75'lik kısmını kaplasın */
   margin: 0 auto; /* Yatayda ortalansın */
   padding: 20px; /* İçerik etrafında boşluk */
-  background-color: #f9f9f9; /* Arka plan rengi */
+  background-color: white; /* Arka plan rengi */
   border-radius: 8px; /* Köşe yuvarlama */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+.boyut h3,
+.hamur h3 {
   display: flex;
-  flex-direction: column;
-  gap: 20px; /* İçerik arasına boşluk ekleyelim */
+  justify-content: space-between;
 }
 
-/* Form, başlık ve diğer içeriklerin düzeni */
-.main-container > div {
-  display: flex;
-  justify-content: space-between; /* Yanyana olmasını sağlar */
-  gap: 30px; /* İki bölüm arasına boşluk ekler */
-  margin-bottom: 30px;
-}
-.main-container > div > div {
-  display: flex;
-  flex-direction: column; /* İçeriği dikey hizalar */
-  justify-content: center;
-  gap: 10px;
+/* Boyut seçimi ve altındaki radio butonları sola dayalı */
+.boyut label {
+  padding-left: 15px; /* Soldan biraz padding ekledik */
 }
 
-/* Boyut ve Hamur Seç bölümündeki radio butonları ve select box'lar */
-.main-container label {
-  display: block;
-  margin: 5px 0;
+.hamur {
+  margin-top: -3.4rem; /* Boyut seçimi ile arasında çok fazla mesafe olmasın */
+}
+/* Dropdown'a sağdan padding ekleyelim, çok dayalı olmasın */
+.hamur select {
+  padding-right: 5rem; /* Sağdan biraz boşluk ekleyelim */
 }
 
-/* Boyut seçimi, hamur seçimi, malzeme seçimi gibi başlıklar */
+/* Boyut ve Hamur başlıkları için düzenleme */
 .main-container h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 8px;
+  text-align: left;
 }
 
-/* Radio button ve select box'lar için */
-.main-container label {
+/****************************************************************************/
+/* Checkbox container */
+
+.checkbox-container {
   display: flex;
-  margin: 5px 0;
+  flex-direction: column; /* Kolon düzeni */
 }
-***************
+
+.checkbox-text {
+  display: flex; /* Flexbox düzenini aktif eder */
+  flex-direction: column; /* Elemanları dikey sıraya yerleştirir */
+  align-items: flex-start; /* Elemanları sola dayalı hizalar */
+  margin-bottom: 10px; /* Checkbox grubuyla arasında boşluk bırakır */
+}
+
+.checkbox-text h3 {
+  margin: 0; /* Başlığın varsayılan marjını kaldırır */
+  font-weight: bold;
+}
+
+.checkbox-text p {
+  margin: 0; /* Metnin varsayılan marjını kaldırır */
+}
+
+.checkbox-kutu {
+  display: flex; /* Flex düzeni */
+  flex-wrap: wrap; /* Satıra sığmayan elemanları bir alt satıra alır */
+}
+
+.checkbox-kutu > div {
+  width: calc(33.33% - 10px); /* Her checkbox için %33.33 genişlik */
+  margin-right: 10px; /* Sağ tarafa boşluk */
+  margin-bottom: 10px; /* Alt tarafa boşluk */
+}
+
+/* Son checkbox için sağ boşluğu kaldır */
+.checkbox-kutu > div:nth-child(3n) {
+  margin-right: 0;
+}
+
+/********************************************************************/
 /* Textarea için stil */
 textarea {
   width: 100%;
