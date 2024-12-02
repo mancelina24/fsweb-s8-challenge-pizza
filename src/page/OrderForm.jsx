@@ -21,6 +21,10 @@ const OrderForm = () => {
     setUrunSayisi,
     toplamTutar,
     setToplamTutar,
+    isim,
+    setIsim,
+    isimError,
+    setIsimError,
   } = useFormState();
 
   const handleBoyutChange = (e) => {
@@ -66,27 +70,41 @@ const OrderForm = () => {
   const history = useHistory();
 
   const handleSiparisVer = () => {
+    // İsim doğrulaması yapılacak
+    if (isim.length < 3) {
+      setIsimError("İsim en az 3 karakter olmalıdır.");
+      return;
+    }
+    setIsimError(""); // Hata mesajını temizle
     history.push("/ordersuccess");
+  };
+
+  const handleIsimChange = (e) => {
+    setIsim(e.target.value);
   };
 
   return (
     <>
-      <header class="order-header">
-        <Header />
-        <NavLink exact to="/">
-          Anasayfa
-        </NavLink>
-        <NavLink exact to="/">
-          Seçenekler
-        </NavLink>
-        <NavLink exact to="/orderform">
-          Sipariş Oluştur
-        </NavLink>
-      </header>
-      <section>
-        <div>Position Absolute Acı Pizza</div>
+      <header>
         <div>
-          <div>{85.5 + "₺"}</div>
+          <Header />
+        </div>
+        <div class="order-header">
+          <NavLink exact to="/">
+            Anasayfa
+          </NavLink>
+          <NavLink exact to="/">
+            Seçenekler
+          </NavLink>
+          <NavLink exact to="/orderform">
+            Sipariş Oluştur
+          </NavLink>
+        </div>
+      </header>
+      <section class="section-container">
+        <div class="section-1">Position Absolute Acı Pizza</div>
+        <div>
+          <div class="section-2">{85.5 + "₺"}</div>
           <div>
             <span class="rating">
               <i class="fa-solid fa-star"></i>
@@ -99,9 +117,9 @@ const OrderForm = () => {
           </div>
         </div>
       </section>
-      <main>
-        <div>
-          <p>
+      <main class="main-container">
+        <div class="detail">
+          <p class="detail">
             Frontent Dev olarak hala position:absolute kullanıyorsan bu çok acı
             pizza tam sana göre. Pizza, domates, peynir ve genellikle çeşitli
             diğer malzemelerle kaplanmış, daha sonra geleneksel olarak odun
@@ -112,7 +130,7 @@ const OrderForm = () => {
           </p>
         </div>
         <div>
-          <div>
+          <div class="boyut">
             <h3>Boyut Seç</h3>
             {data.boyut.map((boyutTipi, i) => (
               <div key={i}>
@@ -129,7 +147,7 @@ const OrderForm = () => {
               </div>
             ))}
           </div>
-          <div>
+          <div class="hamur">
             <h3>Hamur Seç</h3>
             <select name="hamur" onChange={handleHamurChange} value={hamur}>
               <option value="">Hamur Kalınlığı</option>
@@ -154,6 +172,16 @@ const OrderForm = () => {
               label={value}
             />
           ))}
+        </div>
+        <div>
+          <h3>İsim</h3>
+          <input
+            type="text"
+            value={isim}
+            onChange={handleIsimChange}
+            placeholder="İsminizi Girin (En az 3 karakter)"
+          />
+          {isimError && <p style={{ color: "red" }}>{isimError}</p>}
         </div>
         <form>
           <h3>Sipariş Notu</h3>

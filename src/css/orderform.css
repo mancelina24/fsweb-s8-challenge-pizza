@@ -1,28 +1,208 @@
+header {
+  display: flex;
+  flex-direction: column; /* Header ve nav linklerini dikeyde hizalayacağız */
+  justify-content: center; /* İçeriği dikeyde ortalayacağız */
+  align-items: center; /* İçeriği yatayda ortalayacağız */
+  background-color: #ce2829; /* Header arka plan rengini kırmızı yapalım */
+  color: #faf7f2; /* Yazı rengini açık krem yapalım */
+  padding: 20px 0; /* Header'ın üst ve alt boşluğunu arttıralım */
+}
+
+/* Order Header düzeni */
 .order-header {
-  background-color: #ce2829;
-  color: #faf7f2;
-  padding: 10px;
-  display: block;
+  display: flex; /* Flexbox ile içerikleri yatayda hizalayacağız */
+  justify-content: center; /* Linkleri yatayda ortalayacağız */
+  align-items: center; /* İçeriği dikeyde ortalayacağız */
+  gap: 20px; /* Linkler arasına boşluk ekleyelim */
+  width: 100%; /* Header genişliğine yayılsın */
+  padding: 0 20px; /* Header'a yatayda biraz boşluk ekleyelim */
+}
+
+/* NavLink stil */
+.order-header a {
+  color: #faf7f2; /* Link yazı rengini beyaz yapalım */
+  text-decoration: none; /* Linklerin altını çizmesin */
+  font-size: 1 rem; /* Link yazı boyutunu büyütelim */
+  transition: color 0.3s; /* Hover geçişi için yumuşatma */
+}
+
+/* NavLink hover efekti */
+.order-header a:hover {
+  color: #fdc913; /* Hover olduğunda sarı renkte olacak */
+}
+
+/* Rating kısmı */
+.rating {
+  color: red; /* Yıldızlar kırmızı renkte olacak */
+  font-weight: bold; /* Yıldızların kalın görünmesini sağlıyoruz */
+}
+
+/* R_Age kısmına stil */
+.r_age {
+  border: 1px solid black; /* Sınırları siyah yapalım */
+  border-radius: 0.3rem; /* Kenarları yuvarlak yapalım */
+  padding: 0.2rem; /* İç boşluk verelim */
+  margin: 0 0.5rem; /* Yatayda boşluk bırakalım */
+}
+
+/***** SECTION BÖLÜMÜ******/
+/******************************/
+/******************************/
+.section-container {
+  display: flex;
+  flex-direction: column; /* İçerikleri dikey olarak hizalar */
+  gap: 10px; /* Dikeyde boşluk */
+  width: 40%; /* Sayfanın %50'sini kaplasın */
+  margin: 0 auto; /* Yatayda ortalanmış olsun */
+}
+/* Section-1: Position Absolute Acı Pizza */
+.section-1 {
+  font-weight: bold; /* Yazıyı kalın yap */
+  text-align: left; /* Sola dayalı hizalama */
+  font-size: 1rem; /* Yazı boyutunu büyüt */
+  padding-top: 25px;
+}
+
+/* Section-2: Fiyat */
+.section-2 {
+  font-size: 1.5rem;
+  font-weight: normal; /* Normal kalınlık */
+  margin-bottom: 5px; /* Altına boşluk ekleyelim */
+  padding-top: 10px;
+}
+/* Rating kısmı ve 4.9 */
+.rating {
+  color: red; /* Yıldızları kırmızı yap */
+  font-weight: bold;
+}
+
+/* 85.5₺ ve diğer içerikleri ayarlamak */
+.section-container > div {
+  display: flex;
+
+  justify-content: space-between; /* Sola ve sağa dayalı hizalama */
+  align-items: center; /* Ortada hizalar */
+}
+
+/* 85.5₺ sola dayalı */
+.section-container .section-2 {
+  text-align: left; /* Sola hizala */
+  font-weight: bold;
+}
+
+/* Yıldızlar ve 4.9 ve 200 sağa dayalı olacak */
+.section-container div > div {
+  display: flex;
+  justify-content: flex-end; /* Sağ tarafa hizala */
+  gap: 15px; /* Aralarına boşluk ekleyelim */
+  align-items: center; /* Yıldızlar ve puanları ortada hizala */
+}
+
+/***** MAIN BÖLÜMÜ******/
+/******************************/
+/******************************/
+.main-container {
+  width: 40%; /* Sayfanın %75'lik kısmını kaplasın */
+  margin: 0 auto; /* Yatayda ortalansın */
+  padding: 20px; /* İçerik etrafında boşluk */
+  background-color: #f9f9f9; /* Arka plan rengi */
+  border-radius: 8px; /* Köşe yuvarlama */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* İçerik arasına boşluk ekleyelim */
+}
+
+/* Form, başlık ve diğer içeriklerin düzeni */
+.main-container > div {
+  display: flex;
+  justify-content: space-between; /* Yanyana olmasını sağlar */
+  gap: 30px; /* İki bölüm arasına boşluk ekler */
+  margin-bottom: 30px;
+}
+.main-container > div > div {
+  display: flex;
+  flex-direction: column; /* İçeriği dikey hizalar */
   justify-content: center;
+  gap: 10px;
+}
+
+/* Boyut ve Hamur Seç bölümündeki radio butonları ve select box'lar */
+.main-container label {
+  display: block;
+  margin: 5px 0;
+}
+
+/* Boyut seçimi, hamur seçimi, malzeme seçimi gibi başlıklar */
+.main-container h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Radio button ve select box'lar için */
+.main-container label {
+  display: flex;
+  margin: 5px 0;
+}
+***************
+/* Textarea için stil */
+textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+/* Siparişin miktarını artırıp azaltmak için butonlar */
+button {
+  padding: 8px 16px;
+  background-color: #ce2829;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #fdc913; /* Hover rengi */
+}
+
+/* Toplam tutar kısmı */
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Sipariş vermek için buton */
+button[type="submit"] {
+  background-color: #28a745;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Checkbox container düzeni */
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Fiyatların düzeni */
+.main-container > div > div {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.order-header a {
-  color: #faf7f2;
-  text-decoration: none;
-  margin-right: 15px;
-}
-
-.order-header a:hover {
-  color: #fdc913;
-}
-.rating {
-  color: red;
+/* Başlıklar ve içeriklerin düzeni */
+h4 {
+  font-size: 1rem;
   font-weight: bold;
-}
-.r_age {
-  border: 1px solid black;
-  border-radius: 0.3rem;
-  padding: 0.2rem;
-  margin: 0 0.5rem;
 }

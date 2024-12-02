@@ -8,6 +8,8 @@ const useFormState = () => {
   const [siparisNotu, setSiparisNotu] = useState("");
   const [urunSayisi, setUrunSayisi] = useState(1);
   const [toplamTutar, setToplamTutar] = useState(85.5);
+  const [isim, setIsim] = useState("");
+  const [isimError, setIsimError] = useState("");
 
   return {
     boyut,
@@ -22,6 +24,10 @@ const useFormState = () => {
     setUrunSayisi,
     toplamTutar,
     setToplamTutar,
+    isim,
+    setIsim,
+    isimError,
+    setIsimError,
   };
 };
 
