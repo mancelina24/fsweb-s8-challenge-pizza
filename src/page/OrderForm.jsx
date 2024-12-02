@@ -17,6 +17,8 @@ const OrderForm = () => {
     setSiparisNotu,
     urunSayisi,
     setUrunSayisi,
+    toplamTutar,
+    setToplamTutar,
   } = useFormState();
 
   const handleBoyutChange = (e) => {
@@ -32,13 +34,17 @@ const OrderForm = () => {
     if (checked) {
       if (malzemeler.length < 5) {
         setMalzemeler([...malzemeler, value]);
+        setToplamTutar(toplamTutar + 5);
       } else {
         alert("En fazla 5 malzeme seçebilirsiniz!");
       }
     } else {
       setMalzemeler(malzemeler.filter((item) => item !== value));
+      setToplamTutar(toplamTutar - 5);
     }
   };
+
+  const malzemeTutar = malzemeler.length * 5;
 
   const handleSiparisNotuChange = (e) => {
     setSiparisNotu(e.target.value);
@@ -46,11 +52,13 @@ const OrderForm = () => {
 
   const increaseUrunSayisi = () => {
     setUrunSayisi(urunSayisi + 1);
+    setToplamTutar(toplamTutar + 85.5);
   };
 
   const decreaseUrunSayisi = () => {
     if (urunSayisi > 1) {
       setUrunSayisi(urunSayisi - 1);
+      setToplamTutar(toplamTutar - 85.5);
     }
   };
 
@@ -71,7 +79,7 @@ const OrderForm = () => {
       <header>
         <div>Position Absolute Acı Pizza</div>
         <div>
-          <div>85.50₺</div>
+          <div>{85.5 + "₺"}</div>
           <div>
             <span class="rating">
               <i class="fa-solid fa-star"></i>
@@ -157,7 +165,20 @@ const OrderForm = () => {
             <span>{urunSayisi}</span>
             <button onClick={increaseUrunSayisi}>+</button>
           </div>
-          <div>toplam tutar</div>
+          <div>
+            <div>
+              <h3>Sipariş Toplamı</h3>
+            </div>
+            <div>
+              <h4>Seçimler</h4>
+              <p>{malzemeTutar}₺</p>
+            </div>
+            <div>
+              <h4>Toplam</h4>
+              <p>{toplamTutar}₺</p>
+            </div>
+            <button>SİPARİŞ VER</button>
+          </div>
         </div>
       </main>
     </>
