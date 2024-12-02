@@ -1,9 +1,7 @@
-import React from "react";
-
 const Header = () => {
   return (
-    <header>
-      <h1>Teknolojik Yemekler</h1>
+    <header class="header">
+      <img src="/assets/Iteration-1-assets/logo.svg" alt="hansel" />
     </header>
   );
 };

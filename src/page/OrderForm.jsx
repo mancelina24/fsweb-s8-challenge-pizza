@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 import data from "../assets/data";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import useFormState from "../hooks/useState";
 import { Checkbox } from "../Components/Checkbox";
 
@@ -32,11 +32,11 @@ const OrderForm = () => {
     const value = e.target.value;
     const checked = e.target.checked;
     if (checked) {
-      if (malzemeler.length < 5) {
+      if (malzemeler.length < 10) {
         setMalzemeler([...malzemeler, value]);
         setToplamTutar(toplamTutar + 5);
       } else {
-        alert("En fazla 5 malzeme seçebilirsiniz!");
+        alert("En fazla 10 malzeme seçebilirsiniz!");
       }
     } else {
       setMalzemeler(malzemeler.filter((item) => item !== value));
@@ -61,18 +61,23 @@ const OrderForm = () => {
       setToplamTutar(toplamTutar - 85.5);
     }
   };
+  const history = useHistory();
+
+  const handleSiparisVer = () => {
+    history.push("/ordersuccess");
+  };
 
   return (
     <>
       <header class="order-header">
-        <h1>Teknolojik Yemekler</h1>
-        <NavLink activeStyle={{ color: "white" }} exact to="/">
+        <img src="/assets/Iteration-1-assets/logo.svg" alt="hansel" />
+        <NavLink activeStyle={{ color: "#FAF7F2" }} exact to="/">
           Anasayfa
         </NavLink>
-        <NavLink activeStyle={{ color: "white" }} exact to="/">
+        <NavLink activeStyle={{ color: "#FAF7F2" }} exact to="/">
           Seçenekler
         </NavLink>
-        <NavLink activeStyle={{ color: "white" }} exact to="/orderform">
+        <NavLink activeStyle={{ color: "#FAF7F2" }} exact to="/orderform">
           Sipariş Oluştur
         </NavLink>
       </header>
@@ -177,7 +182,7 @@ const OrderForm = () => {
               <h4>Toplam</h4>
               <p>{toplamTutar}₺</p>
             </div>
-            <button>SİPARİŞ VER</button>
+            <button onClick={handleSiparisVer}>SİPARİŞ VER</button>
           </div>
         </div>
       </main>

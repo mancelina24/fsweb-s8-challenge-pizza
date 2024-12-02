@@ -1,0 +1,39 @@
+/* HOME BÖLÜMÜ*/
+.home {
+  background-image: url("/assets/Iteration-1-assets/home-banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  padding-top: 0;
+}
+.home h2 {
+  font-size: 2.6rem; /* Yazı boyutunu büyütüyoruz */
+  font-family: Roboto Condensed; /* Barlow fontunu kullanıyoruz */
+  font-weight: bold; /* Yazıyı kalın yapıyoruz */
+  margin: 10px 0; /* Aralarına boşluk bırakıyoruz */
+  text-transform: uppercase; /* Yazıyı büyük harflerle yapıyoruz */
+  letter-spacing: 2px; /* Harfler arasında boşluk ekliyoruz */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #fdc913;
+  color: black;
+  border: none;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fdc913;
+}

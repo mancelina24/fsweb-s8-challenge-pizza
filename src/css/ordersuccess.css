@@ -1,0 +1,18 @@
+.success {
+  background-color: #ce2829; /* Arka plan kırmızı */
+  height: 100vh; /* Sayfa yüksekliği kadar */
+  display: flex;
+  justify-content: flex-start; /* Yatayda ortalama */
+  align-items: center; /* Dikeyde ortalama */
+  text-align: center; /* Yazıyı ortalamak için */
+  color: #faf7f2; /* Yazı rengini beyaz yapmak */
+  flex-direction: column; /* Yazıları alt alta sıralamak için */
+  padding-top: 130px;
+}
+
+.success h2 {
+  font-family: Roboto Condensed; /* Yazı tipi Roboto Condensed */
+  font-size: 40px; /* Yazı boyutunu büyütüyoruz */
+  font-weight: bold; /* Yazıyı kalın yapıyoruz */
+  margin: 10px 0; /* Yazılar arasına boşluk ekliyoruz */
+}
