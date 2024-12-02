@@ -15,6 +15,8 @@ const OrderForm = () => {
     setMalzemeler,
     siparisNotu,
     setSiparisNotu,
+    urunSayisi,
+    setUrunSayisi,
   } = useFormState();
 
   const handleBoyutChange = (e) => {
@@ -35,6 +37,20 @@ const OrderForm = () => {
       }
     } else {
       setMalzemeler(malzemeler.filter((item) => item !== value));
+    }
+  };
+
+  const handleSiparisNotuChange = (e) => {
+    setSiparisNotu(e.target.value);
+  };
+
+  const increaseUrunSayisi = () => {
+    setUrunSayisi(urunSayisi + 1);
+  };
+
+  const decreaseUrunSayisi = () => {
+    if (urunSayisi > 1) {
+      setUrunSayisi(urunSayisi - 1);
     }
   };
 
@@ -124,12 +140,25 @@ const OrderForm = () => {
             />
           ))}
         </div>
-
-        <form action="">
+        <form>
           <h3>Sipariş Notu</h3>
-          <input type="text" />
+          <textarea
+            value={siparisNotu}
+            onChange={handleSiparisNotuChange}
+            placeholder="Siparişine eklemek istediğin not var mı? (Max 100 karakter)"
+            maxLength="100"
+          />
         </form>
-        <div>adet ve sipariş toplam</div>
+        <div>
+          <div>
+            <button onClick={decreaseUrunSayisi} disabled={urunSayisi <= 1}>
+              -
+            </button>
+            <span>{urunSayisi}</span>
+            <button onClick={increaseUrunSayisi}>+</button>
+          </div>
+          <div>toplam tutar</div>
+        </div>
       </main>
     </>
   );

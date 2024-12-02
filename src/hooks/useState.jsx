@@ -5,6 +5,7 @@ const useFormState = () => {
   const [hamur, setHamur] = useState("");
   const [malzemeler, setMalzemeler] = useState([]);
   const [siparisNotu, setSiparisNotu] = useState("");
+  const [urunSayisi, setUrunSayisi] = useState(1);
 
   return {
     boyut,
@@ -15,6 +16,8 @@ const useFormState = () => {
     setMalzemeler,
     siparisNotu,
     setSiparisNotu,
+    urunSayisi,
+    setUrunSayisi,
   };
 };
 
