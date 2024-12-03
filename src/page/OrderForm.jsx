@@ -6,6 +6,7 @@ import { NavLink, useHistory } from "react-router-dom";
 import useFormState from "../hooks/useState";
 import { Checkbox } from "../Components/Checkbox";
 import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 import axios from "axios";
 
 const OrderForm = () => {
@@ -259,6 +260,7 @@ const OrderForm = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 };
