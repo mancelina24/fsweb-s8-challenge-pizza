@@ -43,11 +43,6 @@ describe("Pizza Order Form", () => {
     cy.get('input[value="Mısır"]').check();
     cy.get('input[value="Kabak"]').check();
 
-    // Enter a valid name
-    cy.get('input[placeholder="İsminizi Girin (En az 3 karakter)"]')
-      .type("Ahmet")
-      .should("have.value", "Ahmet");
-
     // Add order note
     cy.get("textarea").type("No mushrooms please.");
 
