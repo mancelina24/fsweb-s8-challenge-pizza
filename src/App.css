@@ -8,9 +8,9 @@
   text-align: center;
 }
 .header img {
-  max-width: 250px; /* Logoyu küçültüyoruz */
-  height: auto; /* Yüksekliğini otomatik ayarlıyoruz, en boy oranını koruyacak şekilde */
-  margin-top: 20px; /* Üstten biraz boşluk ekliyoruz */
+  max-width: 250px;
+  height: auto;
+  margin-top: 20px;
   justify-content: center;
   align-items: center;
 }

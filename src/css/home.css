@@ -15,12 +15,12 @@
   padding-top: 0;
 }
 .home h2 {
-  font-size: 2.6rem; /* Yazı boyutunu büyütüyoruz */
-  font-family: Roboto Condensed; /* Barlow fontunu kullanıyoruz */
-  font-weight: bold; /* Yazıyı kalın yapıyoruz */
-  margin: 10px 0; /* Aralarına boşluk bırakıyoruz */
-  text-transform: uppercase; /* Yazıyı büyük harflerle yapıyoruz */
-  letter-spacing: 2px; /* Harfler arasında boşluk ekliyoruz */
+  font-size: 2.6rem;
+  font-family: Roboto Condensed;
+  font-weight: bold;
+  margin: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 button {
