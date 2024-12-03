@@ -1,5 +1,4 @@
 import { useState } from "react";
-import data from "../assets/data";
 
 const useFormState = () => {
   const [boyut, setBoyut] = useState("");
