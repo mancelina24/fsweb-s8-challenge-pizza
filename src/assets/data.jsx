@@ -15,6 +15,7 @@ const malzemeler = [
   "Ananas",
   "Kabak",
 ];
+
 const hamur = ["İnce", "Normal", "Kalın"];
 
 export default { boyut, malzemeler, hamur };

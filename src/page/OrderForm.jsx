@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../App.css";
 import "../css/orderform.css";
 import data from "../assets/data";
@@ -6,6 +6,7 @@ import { NavLink, useHistory } from "react-router-dom";
 import useFormState from "../hooks/useState";
 import { Checkbox } from "../Components/Checkbox";
 import Header from "../Components/Header";
+import axios from "axios";
 
 const OrderForm = () => {
   const {
@@ -67,20 +68,56 @@ const OrderForm = () => {
       setToplamTutar(toplamTutar - 85.5);
     }
   };
-  const history = useHistory();
-
-  const handleSiparisVer = () => {
-    // İsim doğrulaması yapılacak
-    if (isim.length < 3) {
-      setIsimError("İsim en az 3 karakter olmalıdır.");
-      return;
-    }
-    setIsimError(""); // Hata mesajını temizle
-    history.push("/ordersuccess");
-  };
 
   const handleIsimChange = (e) => {
     setIsim(e.target.value);
+  };
+  const history = useHistory();
+
+  const handleSiparisVer = async () => {
+    // İsim doğrulaması yapılacak
+    if (isim.length < 3 || boyut === "" || hamur === "") {
+      // İsim hatası kontrolü
+      if (isim.length < 3) {
+        setIsimError("İsim en az 3 karakter olmalıdır.");
+      } else {
+        setIsimError("");
+      }
+
+      // Boyut ve hamur hatası kontrolü
+      if (boyut === "") {
+        alert("Lütfen bir boyut seçin.");
+      }
+
+      if (hamur === "") {
+        alert("Lütfen bir hamur kalınlığı seçin.");
+      }
+
+      return; // Eksik bilgi varsa işlemi durdur
+    }
+
+    setIsimError(""); // Hata mesajını temizle
+
+    const formData = {
+      isim,
+      boyut,
+      hamur,
+      malzemeler,
+      siparisNotu,
+    };
+
+    // Send the POST request
+    axios
+      .post("https://reqres.in/api/pizza", formData)
+      .then((response) => {
+        // API'den gelen yanıtı konsola yazdır
+        console.log("Sipariş Başarıyla Gönderildi", response.data);
+        history.push("/ordersuccess");
+      })
+      .catch((error) => {
+        // Hata mesajını konsola yazdır
+        console.error("Sipariş gönderilirken bir hata oluştu!", error);
+      });
   };
 
   return (
@@ -129,36 +166,34 @@ const OrderForm = () => {
             denir.
           </p>
         </div>
-        <div clas="hamur-boyut">
-          <div>
-            <div class="boyut">
-              <h3>Boyut Seç</h3>
-              {data.boyut.map((boyutTipi, i) => (
-                <div key={i}>
-                  <label>
-                    <input
-                      type="radio"
-                      name="boyut"
-                      value={boyutTipi}
-                      checked={boyut === boyutTipi}
-                      onChange={handleBoyutChange}
-                    />
-                    {boyutTipi}
-                  </label>
-                </div>
+        <div class="hamur-boyut">
+          <div class="boyut">
+            <h3>Boyut Seç</h3>
+            {data.boyut.map((boyutTipi, i) => (
+              <div key={i}>
+                <label>
+                  <input
+                    type="radio"
+                    name="boyut"
+                    value={boyutTipi}
+                    checked={boyut === boyutTipi}
+                    onChange={handleBoyutChange}
+                  />
+                  {boyutTipi}
+                </label>
+              </div>
+            ))}
+          </div>
+          <div class="hamur">
+            <h3>Hamur Seç</h3>
+            <select name="hamur" onChange={handleHamurChange} value={hamur}>
+              <option value="">Hamur Kalınlığı</option>
+              {data.hamur.map((hamurTipi, i) => (
+                <option key={i} value={hamurTipi}>
+                  {hamurTipi}
+                </option>
               ))}
-            </div>
-            <div class="hamur">
-              <h3>Hamur Seç</h3>
-              <select name="hamur" onChange={handleHamurChange} value={hamur}>
-                <option value="">Hamur Kalınlığı</option>
-                {data.hamur.map((hamurTipi, i) => (
-                  <option key={i} value={hamurTipi}>
-                    {hamurTipi}
-                  </option>
-                ))}
-              </select>
-            </div>
+            </select>
           </div>
         </div>
         <div class="checkbox-container">
@@ -198,27 +233,29 @@ const OrderForm = () => {
           />
         </form>
         <hr />
-        <div>
-          <div>
+        <div class="siparisSonuc">
+          <div class="urunSayisi">
             <button onClick={decreaseUrunSayisi} disabled={urunSayisi <= 1}>
               -
             </button>
             <span>{urunSayisi}</span>
             <button onClick={increaseUrunSayisi}>+</button>
           </div>
-          <div>
-            <div>
+          <div class="hesap">
+            <div class="siparistext">
               <h3>Sipariş Toplamı</h3>
             </div>
-            <div>
+            <div class="secimler">
               <h4>Seçimler</h4>
               <p>{malzemeTutar}₺</p>
             </div>
-            <div>
+            <div class="toplam">
               <h4>Toplam</h4>
               <p>{toplamTutar}₺</p>
             </div>
-            <button onClick={handleSiparisVer}>SİPARİŞ VER</button>
+            <button class=" buton" onClick={handleSiparisVer}>
+              SİPARİŞ VER
+            </button>
           </div>
         </div>
       </main>

@@ -1,113 +1,107 @@
 header {
   display: flex;
-  flex-direction: column; /* Header ve nav linklerini dikeyde hizalayacağız */
-  justify-content: center; /* İçeriği dikeyde ortalayacağız */
-  align-items: center; /* İçeriği yatayda ortalayacağız */
-  background-color: #ce2829; /* Header arka plan rengini kırmızı yapalım */
-  color: #faf7f2; /* Yazı rengini açık krem yapalım */
-  padding: 20px 0; /* Header'ın üst ve alt boşluğunu arttıralım */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ce2829;
+  color: #faf7f2;
+  padding: 20px 0;
 }
 
-/* Order Header düzeni */
 .order-header {
-  display: flex; /* Flexbox ile içerikleri yatayda hizalayacağız */
-  justify-content: center; /* Linkleri yatayda ortalayacağız */
-  align-items: center; /* İçeriği dikeyde ortalayacağız */
-  gap: 20px; /* Linkler arasına boşluk ekleyelim */
-  width: 100%; /* Header genişliğine yayılsın */
-  padding: 0 20px; /* Header'a yatayda biraz boşluk ekleyelim */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 0 20px;
 }
 
-/* NavLink stil */
 .order-header a {
-  color: #faf7f2; /* Link yazı rengini beyaz yapalım */
-  text-decoration: none; /* Linklerin altını çizmesin */
-  font-size: 1 rem; /* Link yazı boyutunu büyütelim */
-  transition: color 0.3s; /* Hover geçişi için yumuşatma */
+  color: #faf7f2;
+  text-decoration: none;
+  font-size: 1 rem;
+  transition: color 0.3s;
 }
 
-/* NavLink hover efekti */
 .order-header a:hover {
-  color: #fdc913; /* Hover olduğunda sarı renkte olacak */
+  color: #fdc913;
 }
 
-/* Rating kısmı */
 .rating {
-  color: red; /* Yıldızlar kırmızı renkte olacak */
-  font-weight: bold; /* Yıldızların kalın görünmesini sağlıyoruz */
+  color: red;
+  font-weight: bold;
 }
 
-/* R_Age kısmına stil */
 .r_age {
-  border: 1px solid black; /* Sınırları siyah yapalım */
-  border-radius: 0.3rem; /* Kenarları yuvarlak yapalım */
-  padding: 0.2rem; /* İç boşluk verelim */
-  margin: 0 0.5rem; /* Yatayda boşluk bırakalım */
+  border: 1px solid black;
+  border-radius: 0.3rem;
+  padding: 0.2rem;
+  margin: 0 0.5rem;
 }
 
 /***** SECTION BÖLÜMÜ******/
 /******************************/
 /******************************/
 .section-container {
+  font-family: "Barlow";
   display: flex;
-  flex-direction: column; /* İçerikleri dikey olarak hizalar */
-  gap: 10px; /* Dikeyde boşluk */
-  width: 40%; /* Sayfanın %50'sini kaplasın */
-  margin: 0 auto; /* Yatayda ortalanmış olsun */
+  flex-direction: column;
+  gap: 10px;
+  width: 40%;
+  margin: 0 auto;
 }
 /* Section-1: Position Absolute Acı Pizza */
 .section-1 {
-  font-weight: bold; /* Yazıyı kalın yap */
-  text-align: left; /* Sola dayalı hizalama */
-  font-size: 1rem; /* Yazı boyutunu büyüt */
+  font-weight: bold;
+  text-align: left;
+  font-size: 1rem;
   padding-top: 25px;
 }
 
 /* Section-2: Fiyat */
 .section-2 {
   font-size: 1.5rem;
-  font-weight: normal; /* Normal kalınlık */
-  margin-bottom: 5px; /* Altına boşluk ekleyelim */
+  font-weight: normal;
+  margin-bottom: 5px;
   padding-top: 10px;
 }
-/* Rating kısmı ve 4.9 */
+
 .rating {
-  color: red; /* Yıldızları kırmızı yap */
+  color: red;
   font-weight: bold;
 }
 
-/* 85.5₺ ve diğer içerikleri ayarlamak */
 .section-container > div {
   display: flex;
 
-  justify-content: space-between; /* Sola ve sağa dayalı hizalama */
-  align-items: center; /* Ortada hizalar */
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* 85.5₺ sola dayalı */
 .section-container .section-2 {
-  text-align: left; /* Sola hizala */
+  text-align: left;
   font-weight: bold;
 }
 
-/* Yıldızlar ve 4.9 ve 200 sağa dayalı olacak */
 .section-container div > div {
   display: flex;
-  justify-content: flex-end; /* Sağ tarafa hizala */
-  gap: 15px; /* Aralarına boşluk ekleyelim */
-  align-items: center; /* Yıldızlar ve puanları ortada hizala */
+  justify-content: flex-end;
+  gap: 15px;
+  align-items: center;
 }
 
 /***** MAIN BÖLÜMÜ******/
-/******************************/
+/*****************************************************************************************/
 /******************************/
 .main-container {
-  width: 40%; /* Sayfanın %75'lik kısmını kaplasın */
-  margin: 0 auto; /* Yatayda ortalansın */
-  padding: 20px; /* İçerik etrafında boşluk */
-  background-color: white; /* Arka plan rengi */
-  border-radius: 8px; /* Köşe yuvarlama */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+  font-family: "Barlow";
+  width: 40%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .boyut h3,
 .hamur h3 {
@@ -115,25 +109,32 @@ header {
   justify-content: space-between;
 }
 
-/* Boyut seçimi ve altındaki radio butonları sola dayalı */
 .boyut label {
-  padding-left: 15px; /* Soldan biraz padding ekledik */
+  padding-left: 15px;
 }
 
 .hamur {
-  margin-top: -3.4rem; /* Boyut seçimi ile arasında çok fazla mesafe olmasın */
-}
-/* Dropdown'a sağdan padding ekleyelim, çok dayalı olmasın */
-.hamur select {
-  padding-right: 5rem; /* Sağdan biraz boşluk ekleyelim */
+  margin-top: -2.5rem;
 }
 
-/* Boyut ve Hamur başlıkları için düzenleme */
+.hamur select {
+  padding-right: 6rem;
+}
+
 .main-container h3 {
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   text-align: left;
+}
+.hamur-boyut {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  object-fit: cover;
+  margin: 10px;
+  padding: 8px;
 }
 
 /****************************************************************************/
@@ -141,37 +142,37 @@ header {
 
 .checkbox-container {
   display: flex;
-  flex-direction: column; /* Kolon düzeni */
+  flex-direction: column;
+  font-family: "Barlow";
 }
 
 .checkbox-text {
-  display: flex; /* Flexbox düzenini aktif eder */
-  flex-direction: column; /* Elemanları dikey sıraya yerleştirir */
-  align-items: flex-start; /* Elemanları sola dayalı hizalar */
-  margin-bottom: 10px; /* Checkbox grubuyla arasında boşluk bırakır */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
 }
 
 .checkbox-text h3 {
-  margin: 0; /* Başlığın varsayılan marjını kaldırır */
+  margin: 0;
   font-weight: bold;
 }
 
 .checkbox-text p {
-  margin: 0; /* Metnin varsayılan marjını kaldırır */
+  margin: 0;
 }
 
 .checkbox-kutu {
-  display: flex; /* Flex düzeni */
-  flex-wrap: wrap; /* Satıra sığmayan elemanları bir alt satıra alır */
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .checkbox-kutu > div {
-  width: calc(33.33% - 10px); /* Her checkbox için %33.33 genişlik */
-  margin-right: 10px; /* Sağ tarafa boşluk */
-  margin-bottom: 10px; /* Alt tarafa boşluk */
+  width: calc(33.33% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
-/* Son checkbox için sağ boşluğu kaldır */
 .checkbox-kutu > div:nth-child(3n) {
   margin-right: 0;
 }
@@ -180,36 +181,78 @@ header {
 /* Textarea için stil */
 textarea {
   width: 100%;
-  padding: 8px;
-  font-size: 1rem;
+  font-family: "Barlow";
+  font-size: 0.8rem;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid #5f5f5f;
   resize: none;
 }
 
-/* Siparişin miktarını artırıp azaltmak için butonlar */
-button {
-  padding: 8px 16px;
-  background-color: #ce2829;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
+/********************************************************************/
+
+.siparisSonuc {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0;
+  border: 0.5px solid lightgray;
+}
+
+.urunSayisi {
+  width: 25%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.5rem;
+  margin-top: 0px;
+  gap: 10px;
+}
+
+.hesap {
+  width: 60%;
+  flex-direction: column;
+}
+
+.secimler {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.toplam {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #ce2829;
   font-weight: bold;
 }
 
-button:hover {
-  background-color: #fdc913; /* Hover rengi */
+.urunSayisi button {
+  padding: 10px 10px;
+  border-radius: 5px;
 }
 
-/* Toplam tutar kısmı */
+.buton {
+  width: 100%;
+  padding: 10px 10px;
+  background-color: #fdc913;
+  color: black;
+  border: #5f5f5f;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.buton:hover {
+  background-color: #ce2829;
+}
+
 button:disabled {
-  background-color: #ccc;
+  background-color: #5f5f5f;
   cursor: not-allowed;
 }
 
-/* Sipariş vermek için buton */
 button[type="submit"] {
   background-color: #28a745;
 }
@@ -217,23 +260,6 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #218838;
 }
-
-/* Checkbox container düzeni */
-.checkbox-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* Fiyatların düzeni */
-.main-container > div > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Başlıklar ve içeriklerin düzeni */
-h4 {
-  font-size: 1rem;
-  font-weight: bold;
+.buton {
+  font-size: 10px;
 }
