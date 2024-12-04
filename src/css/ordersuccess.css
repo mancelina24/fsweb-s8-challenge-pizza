@@ -34,7 +34,7 @@
 }
 .urunDetay {
   display: flex;
-  width: 70%;
+  width: 60%;
   text-align: left;
   margin-top: 0;
 }
@@ -49,10 +49,13 @@
   align-items: center;
 }
 .hesap {
-  width: 60%;
+  width: 80%;
   border: 0.5px solid #faf7f2;
   padding: 0 30px;
 }
 .toplam {
   color: #faf7f2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

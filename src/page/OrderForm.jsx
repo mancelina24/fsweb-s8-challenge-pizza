@@ -265,7 +265,7 @@ const OrderForm = () => {
               <h4>Seçimler</h4>
               <p>{malzemeTutar}₺</p>
             </div>
-            <div class="toplam">
+            <div class="toplam2">
               <h4>Toplam</h4>
               <p>{toplamTutar}₺</p>
             </div>

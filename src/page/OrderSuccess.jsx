@@ -59,7 +59,9 @@ const OrderSuccess = () => {
             </div>
             <div className="toplam">
               <h4>Toplam</h4>
-              <p>{toplamTutar}₺</p>
+              <p>
+                <strong>{toplamTutar}₺</strong>
+              </p>
             </div>
           </div>
         </div>
