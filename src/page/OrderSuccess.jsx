@@ -11,9 +11,9 @@ const OrderSuccess = () => {
     <>
       <Header />
       <div className="successContainer">
-        <div>
+        <div class="onbilgi">
           <h1>lezzetin yolda!</h1>
-          <h2>SİPARİŞİNİZ ALINDI!</h2>
+          <h2>SİPARİŞ ALINDI!</h2>
           <h3>{isim}</h3>
         </div>
         <div class="detaylar">

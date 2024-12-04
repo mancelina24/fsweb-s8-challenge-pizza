@@ -21,7 +21,10 @@
   color: #fdc913;
   margin: 10px 0;
 }
-
+.onbilgi {
+  border-bottom: 1px solid #faf7f2;
+  padding: 0 30px;
+}
 .detaylar {
   display: flex;
   flex-direction: column;
@@ -30,18 +33,20 @@
 }
 .urunDetay {
   display: flex;
-  margin-left: -50px;
+  text-align: left;
+  padding-left: -50px;
 }
 .malzeme {
   display: flex;
-  width: 40%;
+
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding-left: 180px;
 }
 .hesap {
-  width: 30%;
+  width: 80%;
+  border: 0.5px solid #faf7f2;
+  padding: 0 30px;
 }
 .toplam {
   color: #faf7f2;
