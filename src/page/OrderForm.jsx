@@ -231,8 +231,12 @@ const OrderForm = () => {
         </div>
         <div class="checkbox-container">
           <div class="checkbox-text">
-            <h3>Ek malzemeler</h3>
-            <p>En fazla 10 malzeme seçebilirsiniz 5₺</p>
+            <h3 style={{ padding: "10px 0", fontFamily: "Barlow" }}>
+              Ek malzemeler
+            </h3>
+            <p style={{ padding: "10px 0", fontFamily: "Barlow" }}>
+              En fazla 10 malzeme seçebilirsiniz 5₺
+            </p>
           </div>
           <div class="checkbox-kutu">
             {data.malzemeler.map((value, i) => (
