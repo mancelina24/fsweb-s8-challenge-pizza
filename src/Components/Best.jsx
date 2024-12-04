@@ -2,7 +2,7 @@ import styled from "styled-components";
 import food1 from "../../Assets/Iteration-2-aseets/pictures/food1.png";
 import food2 from "../../Assets/Iteration-2-aseets/pictures/food2.png";
 import food3 from "../../Assets/Iteration-2-aseets/pictures/food3.png";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ const Container = styled.div`
   align-items: center;
   background-color: #faf7f2;
   gap: 25px;
-  padding: 50px 0px;
+  padding: 20px 0 70px 0;
 `;
 const BestUrun = styled.div`
   background-color: white;

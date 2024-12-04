@@ -12,6 +12,13 @@ import styled from "styled-components";
 const ArkaPlan = styled.div`
   background-color: #faf7f2;
 `;
+const OzelYazi = styled.h1`
+  font-family: "Satisfy";
+  font-size: 1.5rem;
+  color: #fdc913;
+  text-align: center;
+  padding-bottom: 0px;
+`;
 
 const Home = () => {
   return (
@@ -19,7 +26,7 @@ const Home = () => {
       <Header />
       <ArkaPlan>
         <div class="home">
-          <h1>lezzetin yolda!</h1>
+          <OzelYazi>fırsatı kaçırma!</OzelYazi>
           <h2>KOD ACIKTIRIR</h2>
           <h2>PİZZA, DOYURUR</h2>
           <Link to="/orderform">
@@ -30,8 +37,20 @@ const Home = () => {
 
         <Banner />
         <main>
-          <h1>en çok paketlenen menüler!</h1>
-          <h4>Acıktıran Kodlara Doyuran Lezzetler</h4>
+          <OzelYazi style={{ color: "#CE2829" }}>
+            en çok paketlenen menüler!
+          </OzelYazi>
+          <h4
+            style={{
+              fontSize: "2rem",
+              color: "black",
+              textAlign: "center",
+              marginTop: "0",
+              marginBottom: "10px",
+            }}
+          >
+            Acıktıran Kodlara Doyuran Lezzetler
+          </h4>
         </main>
         <CategoryAlt />
         <Best />

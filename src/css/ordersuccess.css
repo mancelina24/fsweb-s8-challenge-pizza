@@ -10,7 +10,8 @@
 
 .successContainer h2 {
   font-family: "Barlow";
-  font-size: 40px;
+  font-weight: lighter;
+  font-size: 50px;
   font-weight: bold;
   margin: 10px 0;
 }
