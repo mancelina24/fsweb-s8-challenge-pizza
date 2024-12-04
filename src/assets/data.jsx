@@ -16,6 +16,6 @@ const malzemeler = [
   "Kabak",
 ];
 
-const hamur = ["Süper İnce", "İnce", "Normal", "Kalın"];
+const hamur = ["Süpper İnce", "İnce", "Normal", "Kalın"];
 
 export default { boyut, malzemeler, hamur };

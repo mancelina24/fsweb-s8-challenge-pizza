@@ -30,21 +30,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 .urunDetay {
   display: flex;
+  width: 70%;
   text-align: left;
-  padding-left: -50px;
+  margin-top: 0;
+}
+
+.urunDetay ul {
+  padding-left: 20px;
 }
 .malzeme {
   display: flex;
-
+  width: 70%;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
 }
 .hesap {
-  width: 80%;
+  width: 60%;
   border: 0.5px solid #faf7f2;
   padding: 0 30px;
 }

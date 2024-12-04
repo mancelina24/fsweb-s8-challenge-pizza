@@ -23,7 +23,7 @@ const OrderSuccess = () => {
           <div className="urunDetay">
             <ul>
               <li>
-                Boyut:{" "}
+                Boyut :{"    "}
                 <strong>
                   {boyut === "Büyük"
                     ? "L"
@@ -35,15 +35,17 @@ const OrderSuccess = () => {
                 </strong>
               </li>
               <li>
-                Hamur: <strong>{hamur}</strong>
+                Hamur :{"    "} <strong>{hamur}</strong>
               </li>
               <li class="malzeme">
-                Ek Malzemeler:
-                {malzemeler && malzemeler.length > 0 ? (
-                  malzemeler.join(", ")
-                ) : (
-                  <span>Yok</span>
-                )}
+                Ek Malzemeler : {"    "}
+                <strong>
+                  {malzemeler && malzemeler.length > 0 ? (
+                    malzemeler.join(", ")
+                  ) : (
+                    <span>Yok</span>
+                  )}
+                </strong>
               </li>
             </ul>
           </div>
