@@ -9,26 +9,23 @@ const BannerMain = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 30mpx;
-  padding: 40px 300px;
+  gap: 20px;
+  padding-top: 40px;
 `;
 
 const Tek = styled.div`
-  position: relative;
-  width: 30vw;
-  height: auto;
   display: flex;
+  position: relative;
+  height: auto;
   justify-content: center;
   align-items: center;
 `;
-
 const Cift = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 60vw;
-  gap: 20px;
+  gap: 15px;
 `;
 
 const Image = styled.img`
