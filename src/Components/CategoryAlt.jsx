@@ -6,7 +6,7 @@ import a5 from "../../Assets/Iteration-2-aseets/icons/a5.svg";
 import a6 from "../../Assets/Iteration-2-aseets/icons/a6.svg";
 import styled from "styled-components";
 
-const CategoryMain = styled.main`
+const CategoryAltMain = styled.main`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -17,41 +17,46 @@ const CategoryMain = styled.main`
   font-weight: bold;
   font-family: Roboto Condensed;
 `;
-const CategoryDetail = styled.div`
+const CategoryAltDetail = styled.div`
   display: flex;
   flex-direction: row;
   gap: 10px;
 `;
+const CategoryAltimg = styled.img`
+  border-radius: 15px;
+  background-color: black;
+  object-fit: cover;
+`;
 
-const Categories = () => {
+const CategoryAlt = () => {
   return (
-    <CategoryMain>
-      <CategoryDetail>
+    <CategoryAltMain>
+      <CategoryAltDetail>
         <img src={a1} width="30" height="30" />
-        <p>YENİ! Kore</p>
-      </CategoryDetail>
-      <CategoryDetail>
+        <p>Ramen</p>
+      </CategoryAltDetail>
+      <CategoryAltDetail>
         <img src={a2} width="30" height="30" />
         <p>Pizza</p>
-      </CategoryDetail>
-      <CategoryDetail>
+      </CategoryAltDetail>
+      <CategoryAltDetail>
         <img src={a3} width="30" height="30" />
         <p>Burger</p>
-      </CategoryDetail>
-      <CategoryDetail>
+      </CategoryAltDetail>
+      <CategoryAltDetail>
         <img src={a4} width="30" height="30" />
-        <p>Kızartmalar</p>
-      </CategoryDetail>
-      <CategoryDetail>
+        <p>Frech Fries</p>
+      </CategoryAltDetail>
+      <CategoryAltDetail>
         <img src={a5} width="30" height="30" />
         <p>Fast Food</p>
-      </CategoryDetail>
-      <CategoryDetail>
+      </CategoryAltDetail>
+      <CategoryAltDetail>
         <img src={a6} width="30" height="30" />
-        <p>Gazlı İçecekler</p>
-      </CategoryDetail>
-    </CategoryMain>
+        <p>Soft Drinks</p>
+      </CategoryAltDetail>
+    </CategoryAltMain>
   );
 };
 
-export default Categories;
+export default CategoryAlt;

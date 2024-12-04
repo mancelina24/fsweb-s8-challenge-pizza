@@ -131,7 +131,6 @@ const OrderForm = () => {
       })
 
       .catch((error) => {
-        // Hata mesajını konsola yazdır
         console.error("Sipariş gönderilirken bir hata oluştu!", error);
       });
   };
