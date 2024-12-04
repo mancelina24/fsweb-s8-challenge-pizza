@@ -11,6 +11,7 @@ const BannerMain = styled.div`
   align-items: center;
   gap: 20px;
   padding-top: 40px;
+  padding-bottom: 40px;
 `;
 
 const Tek = styled.div`

@@ -24,15 +24,7 @@ const OrderSuccess = () => {
             <ul>
               <li>
                 Boyut :{"    "}
-                <strong>
-                  {boyut === "Büyük"
-                    ? "L"
-                    : boyut === "Küçük"
-                    ? "S"
-                    : boyut === "Orta"
-                    ? "M"
-                    : boyut}
-                </strong>
+                <strong>{boyut}</strong>
               </li>
               <li>
                 Hamur :{"    "} <strong>{hamur}</strong>

@@ -8,6 +8,28 @@ import { Checkbox } from "../Components/Checkbox";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import axios from "axios";
+import formbanner from "../../Assets/Iteration-2-aseets/pictures/formbanner.png";
+import styled from "styled-components";
+
+const ImageHeader = styled.img`
+  background-color: #faf7f2;
+  width: 40vw;
+  height: 30vh;
+`;
+const ImageArka = styled.div`
+  margin-top: 0;
+`;
+const Detail = styled.div`
+  background-color: #faf7f2;
+`;
+const DetailAlt = styled.p`
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  margin: 0 380px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+`;
 
 const OrderForm = () => {
   const {
@@ -53,7 +75,6 @@ const OrderForm = () => {
   };
 
   const malzemeTutar = malzemeler.length * 5;
-  console.log(malzemeTutar);
 
   const handleSiparisNotuChange = (e) => {
     setSiparisNotu(e.target.value);
@@ -137,10 +158,12 @@ const OrderForm = () => {
 
   return (
     <>
+      <Header />
       <header>
-        <div>
-          <Header />
-        </div>
+        <div></div>
+        <ImageArka>
+          <ImageHeader src={formbanner} />
+        </ImageArka>
         <div class="order-header">
           <NavLink exact to="/">
             Anasayfa
@@ -158,20 +181,13 @@ const OrderForm = () => {
         <div>
           <div class="section-2">{85.5 + "₺"}</div>
           <div>
-            <span class="rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-regular fa-star"></i> 4.9
-            </span>
-            <span>(200)</span>
+            <span class="rating">4.9 {"     "}(200)</span>
           </div>
         </div>
       </section>
-      <main class="main-container">
-        <div class="detail">
-          <p class="detail">
+      <hero>
+        <Detail>
+          <DetailAlt>
             Frontent Dev olarak hala position:absolute kullanıyorsan bu çok acı
             pizza tam sana göre. Pizza, domates, peynir ve genellikle çeşitli
             diğer malzemelerle kaplanmış, daha sonra geleneksel olarak odun
@@ -179,8 +195,10 @@ const OrderForm = () => {
             yuvarlak, düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan
             kökenli lezzetli bir yemektir. Küçük bir pizzaya bazen pizzetta
             denir.
-          </p>
-        </div>
+          </DetailAlt>
+        </Detail>
+      </hero>
+      <main class="main-container">
         <div class="hamur-boyut">
           <div class="boyut">
             <h3>Boyut Seç</h3>
@@ -231,12 +249,15 @@ const OrderForm = () => {
         <div>
           <h3>İsim</h3>
           <input
+            class="isim"
             type="text"
             value={isim}
             onChange={handleIsimChange}
             placeholder="İsminizi Girin (En az 3 karakter)"
           />
-          {isimError && <p style={{ color: "red" }}>{isimError}</p>}
+          {isimError && (
+            <p style={{ color: "red", fontWeight: "bold" }}>{isimError}</p>
+          )}
         </div>
         <form>
           <h3>Sipariş Notu</h3>

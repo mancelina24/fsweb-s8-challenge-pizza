@@ -7,7 +7,7 @@ import li2 from "../../Assets/Iteration-2-aseets/footer/insta/li2.png";
 import li3 from "../../Assets/Iteration-2-aseets/footer/insta/li3.png";
 import li4 from "../../Assets/Iteration-2-aseets/footer/insta/li4.png";
 import li5 from "../../Assets/Iteration-2-aseets/footer/insta/li5.png";
-import logo from "../../Assets/Iteration-2-aseets/footer/icons/logo.svg";
+import logofooter from "../../Assets/Iteration-2-aseets/footer/logofooter.svg";
 
 import "../App.css";
 import React from "react";
@@ -17,7 +17,7 @@ const Footer = () => {
     <footer class="footer">
       <main class="footerMain">
         <address class="iletisim">
-          <img src={logo} width="25" height="25" />
+          <img src={logofooter} width="100" height="auto" />
           <div class="adres">
             <img src={icon1} width="25" height="25" />
             <p class="Text">341 Londondery Road. Istanbul Türkiye</p>

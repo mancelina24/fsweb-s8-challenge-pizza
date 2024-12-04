@@ -1,4 +1,4 @@
-const boyut = ["Küçük", "Büyük", "Orta"];
+const boyut = ["S", "M", "L"];
 
 const malzemeler = [
   "Pepperoni",

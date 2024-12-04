@@ -34,7 +34,6 @@ const Home = () => {
           </Link>
         </div>
         <Categories />
-
         <Banner />
         <main>
           <OzelYazi style={{ color: "#CE2829" }}>
