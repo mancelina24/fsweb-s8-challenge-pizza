@@ -7,6 +7,8 @@ import li2 from "../../Assets/Iteration-2-aseets/footer/insta/li2.png";
 import li3 from "../../Assets/Iteration-2-aseets/footer/insta/li3.png";
 import li4 from "../../Assets/Iteration-2-aseets/footer/insta/li4.png";
 import li5 from "../../Assets/Iteration-2-aseets/footer/insta/li5.png";
+import logofooter "../../Assets/Iteration-2-aseets/footer/logofooter.svg"
+
 import "../App.css";
 import React from "react";
 
@@ -16,6 +18,7 @@ const Footer = () => {
       <main class="footerMain">
         <address class="iletisim">
           <h3 class="iletisimText">Teknolojik Yemekler</h3>
+          <img src={logofooter} width="50" height="70" />
           <div class="adres">
             <img src={icon1} alt="Ev İkonu" width="32" height="32" />
             <p class="Text">341 Londondery Road. Istanbul Türkiye</p>
