@@ -53,6 +53,7 @@ const OrderForm = () => {
   };
 
   const malzemeTutar = malzemeler.length * 5;
+  console.log(malzemeTutar);
 
   const handleSiparisNotuChange = (e) => {
     setSiparisNotu(e.target.value);
@@ -104,7 +105,8 @@ const OrderForm = () => {
       boyut,
       hamur,
       malzemeler,
-      siparisNotu,
+      malzemeTutar,
+      toplamTutar,
     };
 
     // Send the POST request
@@ -113,8 +115,21 @@ const OrderForm = () => {
       .then((response) => {
         // API'den gelen yanıtı konsola yazdır
         console.log("Sipariş Başarıyla Gönderildi", response.data);
-        history.push("/ordersuccess");
+
+        history.push({
+          pathname: "/ordersuccess",
+          state: {
+            // Geçirilmesi gereken veriler
+            isim,
+            boyut,
+            hamur,
+            malzemeler,
+            malzemeTutar,
+            toplamTutar,
+          },
+        });
       })
+
       .catch((error) => {
         // Hata mesajını konsola yazdır
         console.error("Sipariş gönderilirken bir hata oluştu!", error);
