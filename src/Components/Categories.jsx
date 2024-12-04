@@ -21,6 +21,8 @@ const CategoryDetail = styled.div`
   display: flex;
   flex-direction: row;
   gap: 10px;
+  border:1px solid white
+  border-radius:20px
 `;
 
 const Categories = () => {

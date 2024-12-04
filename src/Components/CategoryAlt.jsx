@@ -7,11 +7,11 @@ import a6 from "../../Assets/Iteration-2-aseets/icons/a6.svg";
 import styled from "styled-components";
 
 const CategoryAltMain = styled.main`
+  background-color: #faf7f2;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 15px;
-  background-color: white;
   gap: 50px;
   font-size: 0.7rem;
   font-weight: bold;
@@ -21,11 +21,21 @@ const CategoryAltDetail = styled.div`
   display: flex;
   flex-direction: row;
   gap: 10px;
+  padding: 7px;
+  background-color: white;
+  border-radius: 20px;
+  color: black;
+  width: 100px;
 `;
-const CategoryAltimg = styled.img`
-  border-radius: 15px;
-  background-color: black;
-  object-fit: cover;
+const CategoryAltDetail2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 7px;
+  background-color: #292929;
+  border-radius: 20px;
+  color: white;
+  width: 100px;
 `;
 
 const CategoryAlt = () => {
@@ -35,10 +45,10 @@ const CategoryAlt = () => {
         <img src={a1} width="30" height="30" />
         <p>Ramen</p>
       </CategoryAltDetail>
-      <CategoryAltDetail>
+      <CategoryAltDetail2>
         <img src={a2} width="30" height="30" />
         <p>Pizza</p>
-      </CategoryAltDetail>
+      </CategoryAltDetail2>
       <CategoryAltDetail>
         <img src={a3} width="30" height="30" />
         <p>Burger</p>
