@@ -16,15 +16,28 @@ const OrderSuccess = () => {
           <h2>SİPARİŞİNİZ ALINDI!</h2>
           <h3>{isim}</h3>
         </div>
-        <div>
+        <div class="detaylar">
           <div>
             <h3>Position Absolute Acı Pizza</h3>
           </div>
           <div className="urunDetay">
             <ul>
-              <li>Boyut: {boyut}</li>
-              <li>Hamur: {hamur}</li>
               <li>
+                Boyut:{" "}
+                <strong>
+                  {boyut === "Büyük"
+                    ? "L"
+                    : boyut === "Küçük"
+                    ? "S"
+                    : boyut === "Orta"
+                    ? "M"
+                    : boyut}
+                </strong>
+              </li>
+              <li>
+                Hamur: <strong>{hamur}</strong>
+              </li>
+              <li class="malzeme">
                 Ek Malzemeler:
                 {malzemeler && malzemeler.length > 0 ? (
                   malzemeler.join(", ")
