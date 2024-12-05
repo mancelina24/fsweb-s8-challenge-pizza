@@ -27,7 +27,8 @@ const DetailAlt = styled.p`
   width: 40%;
   display: flex;
   justify-content: center;
-  margin: 0 380px;
+  margin: 0 430px;
+
   padding-top: 20px;
   padding-bottom: 20px;
 `;
@@ -178,12 +179,14 @@ const OrderForm = () => {
         </div>
       </header>
       <section class="section-container">
-        <div class="section-1">Position Absolute Acı Pizza</div>
-        <div>
-          <div class="section-2">{85.5 + "₺"}</div>
-          <div>
-            <span class="rating">4.9 {"     "}</span>
-            <span>(200)</span>
+        <div class="section-1">
+          <div>Position Absolute Acı Pizza</div>
+        </div>
+        <div class="section-2">
+          <div class="fiyat">{85.5 + "₺"}</div>
+          <div class="rates">
+            <p>4.9 </p>
+            <p>(200)</p>
           </div>
         </div>
       </section>

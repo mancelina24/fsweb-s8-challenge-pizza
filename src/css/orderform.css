@@ -31,18 +31,6 @@ header {
   color: #292929;
 }
 
-.rating {
-  color: red;
-  font-weight: bold;
-}
-
-.r_age {
-  border: 1px solid black;
-  border-radius: 0.3rem;
-  padding: 0.2rem;
-  margin: 0 0.5rem;
-}
-
 /***** SECTION BÖLÜMÜ******/
 /******************************/ /******************************/
 .section-container {
@@ -51,56 +39,44 @@ header {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 100%;
   margin: 0 auto;
 }
 /* Section-1: Position Absolute Acı Pizza */
 .section-1 {
-  width: 40%;
-  font-weight: bold;
   display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
   font-size: 1rem;
   padding-top: 25px;
-  margin: 0 380px;
+  padding-right: 395px;
 }
 
 /* Section-2: Fiyat */
 .section-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
   font-size: 1.5rem;
   font-weight: normal;
   margin-bottom: 5px;
   padding-top: 10px;
-  margin: 0 380px;
+  gap: 400px;
 }
-
-.rating {
-  margin-right: 400px;
-  row-gap: 10px;
-  color: #292929;
-  font-weight: normal;
+.fiyat {
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
-
-.section-container > div {
+.rates {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.section-container .section-2 {
-  text-align: left;
-  font-weight: bold;
-}
-
-.section-container div > div {
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;
-  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  gap: 70px;
 }
 
 /***** MAIN BÖLÜMÜ******/
-/*****************************************************************************************/
-/******************************/
+/*******************************************************************************/
 .main-container {
   font-family: "Barlow";
   width: 40%;
