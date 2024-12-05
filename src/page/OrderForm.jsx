@@ -10,7 +10,8 @@ import Footer from "../Components/Footer";
 import axios from "axios";
 import formbanner from "../../Assets/Iteration-2-aseets/pictures/formbanner.png";
 import styled from "styled-components";
-
+import "../css/CustomCheckbox.css";
+import "../css/DropDown.css";
 const ImageHeader = styled.img`
   background-color: #faf7f2;
   width: 40vw;
@@ -181,7 +182,8 @@ const OrderForm = () => {
         <div>
           <div class="section-2">{85.5 + "₺"}</div>
           <div>
-            <span class="rating">4.9 {"     "}(200)</span>
+            <span class="rating">4.9 {"     "}</span>
+            <span>(200)</span>
           </div>
         </div>
       </section>
@@ -202,31 +204,38 @@ const OrderForm = () => {
         <div class="hamur-boyut">
           <div class="boyut">
             <h3>Boyut Seç</h3>
-            {data.boyut.map((boyutTipi, i) => (
-              <div key={i}>
-                <label>
-                  <input
-                    type="radio"
-                    name="boyut"
-                    value={boyutTipi}
-                    checked={boyut === boyutTipi}
-                    onChange={handleBoyutChange}
-                  />
-                  {boyutTipi}
-                </label>
-              </div>
-            ))}
+            <div class="boyutKonum">
+              {data.boyut.map((boyutTipi, i) => (
+                <div key={i} class="dpx">
+                  <div class="px">
+                    <label>
+                      <input
+                        class="option-input"
+                        type="radio"
+                        name="boyut"
+                        value={boyutTipi}
+                        checked={boyut === boyutTipi}
+                        onChange={handleBoyutChange}
+                      />
+                      <p className="radio-label">{boyutTipi}</p>
+                    </label>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
           <div class="hamur">
             <h3>Hamur Seç</h3>
-            <select name="hamur" onChange={handleHamurChange} value={hamur}>
-              <option value="">Hamur Kalınlığı</option>
-              {data.hamur.map((hamurTipi, i) => (
-                <option key={i} value={hamurTipi}>
-                  {hamurTipi}
-                </option>
-              ))}
-            </select>
+            <div class="custom-select">
+              <select name="hamur" onChange={handleHamurChange} value={hamur}>
+                <option value="">- Hamur Kalınlığı Seç -</option>
+                {data.hamur.map((hamurTipi, i) => (
+                  <option key={i} value={hamurTipi}>
+                    {hamurTipi}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
         <div class="checkbox-container">
@@ -238,7 +247,7 @@ const OrderForm = () => {
               En fazla 10 malzeme seçebilirsiniz 5₺
             </p>
           </div>
-          <div class="checkbox-kutu">
+          <div class="checkdiv">
             {data.malzemeler.map((value, i) => (
               <Checkbox
                 key={i}

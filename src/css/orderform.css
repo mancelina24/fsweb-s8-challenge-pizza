@@ -111,105 +111,14 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.boyut h3,
-.hamur h3 {
-  display: flex;
-  justify-content: space-between;
-}
-
-.boyut label {
-  padding-left: 15px;
-}
-
-.hamur {
-  margin-top: -2.5rem;
-}
-
-.hamur select {
-  padding: 10px 30px;
-  border-radius: 4px;
-  border: none;
-  background-color: #faf7f2;
-}
-
 .main-container h3 {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 6px;
   text-align: left;
 }
-.hamur-boyut {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  object-fit: cover;
-  margin: 10px;
-  padding: 8px;
-}
 
 /****************************************************************************/
-/* Checkbox container */
-
-.checkbox-container {
-  display: flex;
-  flex-direction: column;
-  font-family: "Barlow";
-}
-
-.checkbox-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 10px;
-}
-
-.checkbox-text h3 {
-  margin: 0;
-  font-weight: bold;
-}
-
-.checkbox-text p {
-  margin: 0;
-}
-
-.checkbox-kutu {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.checkbox-kutu > div {
-  width: calc(33.33% - 10px);
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
-.checkbox-kutu > div:nth-child(3n) {
-  margin-right: 0;
-}
-
-/********************************************************************/
-/* Textarea  */
-textarea {
-  width: 100%;
-  font-family: "Barlow";
-  background-color: #faf7f2;
-  font-size: 0.8rem;
-  border-radius: 4px;
-  border: none;
-}
-
-/********************************************************************/
-/* isim bölümü */
-.isim {
-  border-radius: 4px;
-  font-family: "Barlow";
-  border: none;
-  width: 70%;
-  background-color: #faf7f2;
-  font-size: 0.8rem;
-  padding: 7px 0;
-}
 
 /********************************************************************/
 

@@ -1,0 +1,122 @@
+/* Checkbox container */
+
+.checkbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-family: "Barlow";
+}
+
+.checkbox-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.checkbox-text h3 {
+  margin: 0;
+
+  font-weight: bold;
+}
+
+.checkbox-text p {
+  margin: 0;
+}
+
+.kcontainer {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: "Barlow";
+  padding-left: 35px;
+  padding-bottom: 8px;
+  padding-top: 5px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 0.6rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: bold;
+  width: 20%;
+  align-items: center;
+}
+.checkdiv {
+  display: flex;
+  flex-wrap: wrap;
+
+  font-size: 1.6rem;
+  gap: 1.6rem;
+  margin: 3rem 0;
+  justify-content: space-between;
+}
+
+.containerInput {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #faf7f2;
+}
+.kcontainer:hover input ~ .checkmark {
+  background-color: #faf7f2;
+}
+
+.kcontainer input:checked ~ .checkmark {
+  background-color: #fdc913;
+  border-radius: 5px;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.kcontainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.kcontainer .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Textarea  */
+textarea {
+  width: 100%;
+  font-family: "Barlow";
+  background-color: #faf7f2;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  border: none;
+}
+
+/********************************************************************/
+/* isim bölümü */
+.isim {
+  border-radius: 4px;
+  font-family: "Barlow";
+  border: none;
+  width: 70%;
+  background-color: #faf7f2;
+  font-size: 0.8rem;
+  padding: 7px 0;
+}

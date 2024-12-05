@@ -35,21 +35,23 @@
 }
 .urunDetay {
   display: flex;
-  width: 60%;
+  width: 100%;
   text-align: left;
-  margin-top: 0;
+  margin-right: 0;
 }
 
 .urunDetay ul {
-  padding-left: 20px;
+  width: 150px;
+  padding-top: 0;
 }
 .malzeme {
   display: flex;
-  width: 70%;
+  width: 100%;
   flex-wrap: wrap;
   align-items: center;
 }
 .hesap {
+  background-color: #ce2829;
   width: 80%;
   border: 0.5px solid #faf7f2;
   padding: 0 30px;
