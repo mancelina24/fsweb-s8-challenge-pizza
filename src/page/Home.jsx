@@ -11,6 +11,14 @@ import styled from "styled-components";
 
 const ArkaPlan = styled.div`
   background-color: #faf7f2;
+
+  @media (max-width: 768px) {
+    padding: 8px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 5px;
+  }
 `;
 const OzelYazi = styled.h1`
   font-family: "Satisfy";
@@ -18,6 +26,14 @@ const OzelYazi = styled.h1`
   color: #fdc913;
   text-align: center;
   padding-bottom: 0px;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 const Home = () => {
