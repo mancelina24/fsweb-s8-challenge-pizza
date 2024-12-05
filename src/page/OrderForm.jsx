@@ -287,10 +287,10 @@ const OrderForm = () => {
             <button onClick={decreaseUrunSayisi} disabled={urunSayisi <= 1}>
               -
             </button>
-            <span>{urunSayisi}</span>
+            <span style={{ width: "50px" }}>{urunSayisi}</span>
             <button onClick={increaseUrunSayisi}>+</button>
           </div>
-          <div class="hesap">
+          <div class="hesaplama">
             <div class="siparistext">
               <h3>Sipariş Toplamı</h3>
             </div>
@@ -298,7 +298,7 @@ const OrderForm = () => {
               <h4>Seçimler</h4>
               <p>{malzemeTutar}₺</p>
             </div>
-            <div class="toplam2">
+            <div class="toplamtutar">
               <h4>Toplam</h4>
               <p>{toplamTutar}₺</p>
             </div>

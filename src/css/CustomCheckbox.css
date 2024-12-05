@@ -99,7 +99,8 @@
   transform: rotate(45deg);
 }
 
-/* Textarea  */
+/*********************************************************************** 
+*Textarea  */
 textarea {
   width: 100%;
   font-family: "Barlow";
@@ -119,4 +120,94 @@ textarea {
   background-color: #faf7f2;
   font-size: 0.8rem;
   padding: 7px 0;
+}
+
+/********************************************************************/
+/* hesaplama  bölümü*/
+
+.siparisSonuc {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0;
+  padding-bottom: 50px;
+  padding-top: 30px;
+  width: 100%;
+}
+
+.urunSayisi {
+  width: 700px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1.5rem;
+  width: 5rem;
+  padding-left: 20px;
+  /*border: none;
+  background-color: #faf7f2;*/
+}
+.urunSayisi button {
+  width: 100px;
+  border-radius: 5px;
+  background-color: #faf7f2;
+}
+.hesaplama {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: #faf7f2;
+  border: none;
+  border-radius: 7px;
+  margin: 0 20px;
+  padding-right: 20px;
+}
+
+.secimler {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.toplamtutar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #ce2829;
+  font-weight: bold;
+}
+
+.urunSayisi button {
+  padding: 15px 15px;
+  border-radius: 5px;
+}
+
+.buton {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #fdc913;
+  color: black;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.buton:hover {
+  background-color: #ce2829;
+}
+
+button:disabled {
+  background-color: #faf7f2;
+  cursor: not-allowed;
+}
+
+button[type="submit"] {
+  background-color: #28a745;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+.buton {
+  font-size: 10px;
 }
