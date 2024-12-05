@@ -129,44 +129,58 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 0;
   padding-bottom: 50px;
   padding-top: 30px;
   width: 100%;
 }
 
 .urunSayisi {
-  width: 700px;
-  flex-direction: row;
+  display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   font-size: 1.5rem;
-  width: 5rem;
   padding-left: 20px;
-  /*border: none;
-  background-color: #faf7f2;*/
+  gap: 10px;
 }
-.urunSayisi button {
-  width: 100px;
-  border-radius: 5px;
+.butonartis {
+  font-size: 13px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
   background-color: #faf7f2;
+  color: black;
+  border-radius: 8px;
 }
+
 .hesaplama {
   display: flex;
   flex-direction: column;
-  width: 300px;
+
+  width: 350px;
   background-color: #faf7f2;
   border: none;
   border-radius: 7px;
-  margin: 0 20px;
-  padding-right: 20px;
+  margin-right: 50px;
+  padding: 0px;
+  margin-left: 20px;
 }
 
+.siparistext h3 {
+  padding-left: 20px;
+}
 .secimler {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-left: 20px;
+}
+
+.secimler p {
+  padding-right: 20px;
+}
+.toplamtutar p {
+  padding-right: 20px;
 }
 .toplamtutar {
   display: flex;
@@ -175,21 +189,26 @@ textarea {
   align-items: center;
   color: #ce2829;
   font-weight: bold;
+  padding-left: 20px;
 }
 
 .urunSayisi button {
-  padding: 15px 15px;
   border-radius: 5px;
 }
 
 .buton {
-  width: 100%;
   padding: 10px 0;
   background-color: #fdc913;
   color: black;
   border-radius: 2px;
   cursor: pointer;
   font-size: 2rem;
+  margin-top: 20px;
+  margin-right: 0;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .buton:hover {

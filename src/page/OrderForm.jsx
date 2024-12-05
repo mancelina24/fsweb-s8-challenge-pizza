@@ -284,11 +284,27 @@ const OrderForm = () => {
         <hr />
         <div class="siparisSonuc">
           <div class="urunSayisi">
-            <button onClick={decreaseUrunSayisi} disabled={urunSayisi <= 1}>
+            <button
+              class="butonartis"
+              onClick={decreaseUrunSayisi}
+              disabled={urunSayisi <= 1}
+            >
               -
             </button>
-            <span style={{ width: "50px" }}>{urunSayisi}</span>
-            <button onClick={increaseUrunSayisi}>+</button>
+            <p
+              style={{
+                backgroundColor: "#faf7f2",
+                fontSize: "15px",
+                width: "20px",
+                padding: "5px",
+                margin: "5px",
+              }}
+            >
+              {urunSayisi}
+            </p>
+            <button class="butonartis" onClick={increaseUrunSayisi}>
+              +
+            </button>
           </div>
           <div class="hesaplama">
             <div class="siparistext">
