@@ -63,20 +63,27 @@ const OrderForm = () => {
   const handleCheckChange = (e) => {
     const value = e.target.value;
     const checked = e.target.checked;
+    let updatedMalzemeler = [...malzemeler];
+    let newToplamTutar = toplamTutar;
     if (checked) {
-      if (malzemeler.length < 10) {
-        setMalzemeler([...malzemeler, value]);
-        setToplamTutar(toplamTutar + 5);
+      if (updatedMalzemeler.length < 10) {
+        updatedMalzemeler.push(value);
+        // Her pizza başına ek malzeme ücreti ekliyoruz
+        newToplamTutar += 5 * urunSayisi;
       } else {
         alert("En fazla 10 malzeme seçebilirsiniz!");
       }
     } else {
-      setMalzemeler(malzemeler.filter((item) => item !== value));
-      setToplamTutar(toplamTutar - 5);
+      updatedMalzemeler = updatedMalzemeler.filter((item) => item !== value);
+      // Her pizza başına ek malzeme ücreti çıkarıyoruz
+      newToplamTutar -= 5 * urunSayisi;
     }
+
+    setMalzemeler(updatedMalzemeler);
+    setToplamTutar(newToplamTutar);
   };
 
-  const malzemeTutar = malzemeler.length * 5;
+  const malzemeTutar = malzemeler.length * 5 * urunSayisi;
 
   const handleSiparisNotuChange = (e) => {
     setSiparisNotu(e.target.value);

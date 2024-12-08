@@ -45,7 +45,7 @@ const OrderSuccess = () => {
             <div className="siparistext">
               <h3>Sipariş Toplamı</h3>
             </div>
-            <div className="secimler">
+            <div className="secimlersuccess">
               <h4>Seçimler</h4>
               <p>{malzemeTutar}₺</p>
             </div>
