@@ -16,6 +16,11 @@ const ImageHeader = styled.img`
   background-color: #faf7f2;
   width: 40vw;
   height: 30vh;
+
+  @media (max-width: 780px) {
+    width: 80vw;
+    height: 20vh;
+  }
 `;
 const ImageArka = styled.div`
   margin-top: 0;
@@ -28,9 +33,14 @@ const DetailAlt = styled.p`
   display: flex;
   justify-content: center;
   margin: 0 430px;
-
   padding-top: 20px;
   padding-bottom: 20px;
+
+  @media (max-width: 780px) {
+    width: 85vw;
+    height: 20vh;
+    margin: 0 30px;
+  }
 `;
 
 const OrderForm = () => {
@@ -269,7 +279,7 @@ const OrderForm = () => {
             ))}
           </div>
         </div>
-        <div>
+        <div class="main_isim">
           <h3>İsim</h3>
           <input
             class="isim"
@@ -282,15 +292,17 @@ const OrderForm = () => {
             <p style={{ color: "red", fontWeight: "bold" }}>{isimError}</p>
           )}
         </div>
-        <form>
-          <h3>Sipariş Notu</h3>
-          <textarea
-            value={siparisNotu}
-            onChange={handleSiparisNotuChange}
-            placeholder="Siparişine eklemek istediğin not var mı? (Max 100 karakter)"
-            maxLength="100"
-          />
-        </form>
+        <div class="main_not">
+          <form class="siparisNot">
+            <h3>Sipariş Notu</h3>
+            <textarea
+              value={siparisNotu}
+              onChange={handleSiparisNotuChange}
+              placeholder="Siparişine eklemek istediğin not var mı? (Max 100 karakter)"
+              maxLength="100"
+            />
+          </form>
+        </div>
         <hr />
         <div class="siparisSonuc">
           <div class="urunSayisi">

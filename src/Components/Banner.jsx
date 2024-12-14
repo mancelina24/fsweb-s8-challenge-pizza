@@ -12,6 +12,11 @@ const BannerMain = styled.div`
   gap: 20px;
   padding-top: 40px;
   padding-bottom: 40px;
+  @media {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const Tek = styled.div`
@@ -27,6 +32,9 @@ const Cift = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 15px;
+  @media {
+    gap: 0.5rem;
+  }
 `;
 
 const Image = styled.img`

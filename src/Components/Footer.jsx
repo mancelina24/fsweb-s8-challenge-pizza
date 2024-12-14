@@ -45,7 +45,7 @@ const Footer = () => {
         <div class="instagram">
           <h3>Instagram</h3>
           <div class="insResim">
-            <img src={li0} width="50" height="50" />
+            <img src={li0} />
             <img src={li1} width="50" height="50" />
             <img src={li2} width="50" height="50" />
             <img src={li3} width="50" height="50" />

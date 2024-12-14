@@ -19,6 +19,7 @@ header {
 }
 
 .order-header a {
+  font-family: "Roboto Condensed";
   color: #ce2829;
   text-decoration: none;
   font-size: 1 rem;
@@ -96,71 +97,86 @@ header {
 
 /**********************************************************************/
 
-@media (max-width: 768px) {
+@media (max-width: 780px) {
+  header {
+    width: 100%;
+  }
   .main-container {
-    width: 70%;
+    width: 100%;
+    padding-left: 0;
+    /*padding-left: 1rempx;*/
   }
   .order-header {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 1.1rem;
   }
 
+  .order-header a {
+    font-size: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  .hamur-boyut {
+    width: 80%;
+    padding-left: 2rem;
+    gap: 1rem;
+  }
   .section-container {
     flex-direction: column;
     align-items: center;
   }
+  .custom-select select {
+    width: 70%;
+  }
+  .section-1 {
+    padding-right: 0;
+  }
+  .section-2 {
+    gap: 9rem;
+  }
+
+  textarea {
+    width: 70%;
+    margin-right: 2rem;
+  }
+
+  .urunSayisi {
+    padding-bottom: 1.2rem;
+    padding-right: 2rem;
+    padding-left: 0;
+  }
 
   .siparisSonuc {
     flex-direction: column;
-    align-items: center;
   }
 
   .siparisSonuc .hesap {
     margin-top: 10px;
+    align-items: center;
   }
-
   .checkbox-kutu {
     flex-direction: column;
   }
 
   .checkbox-kutu label {
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
   }
 
   .checkbox-container {
     margin-top: 20px;
+    width: 85%;
+    padding-left: 2rem;
   }
-}
-
-@media (max-width: 480px) {
-  .section-container {
-    width: 100%;
+  .main_isim {
+    margin-left: 2rem;
+    width: 90%;
   }
-  .section-1 {
-    font-size: 20px;
-  }
-
-  .section-2 {
-    font-size: 18px;
+  .main_not {
+    margin-left: 2rem;
+    width: 90%;
   }
 
-  .main-container {
-    padding: 10px;
-  }
-
-  .siparisSonuc .urunSayisi {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .siparisSonuc .hesap {
-    align-items: center;
-  }
-
-  .siparisSonuc button {
-    width: 100%;
-    padding: 15px;
-    font-size: 18px;
+  .kcontainer {
+    width: 40%;
   }
 }

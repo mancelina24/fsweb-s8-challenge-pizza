@@ -16,6 +16,9 @@ const CategoryMain = styled.main`
   font-size: 0.7rem;
   font-weight: bold;
   font-family: Roboto Condensed;
+  @media {
+    gap: 10px;
+  }
 `;
 const CategoryDetail = styled.div`
   display: flex;

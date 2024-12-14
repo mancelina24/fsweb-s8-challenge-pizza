@@ -9,10 +9,9 @@
 }
 
 .successContainer h2 {
-  font-family: "Barlow";
+  font-family: "Roboto Condensed";
   font-weight: lighter;
-  font-size: 50px;
-  font-weight: bold;
+  font-size: 3.2rem;
   margin: 10px 0;
 }
 .successContainer h1 {
