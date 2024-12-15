@@ -12,7 +12,7 @@ const BannerMain = styled.div`
   gap: 20px;
   padding-top: 40px;
   padding-bottom: 40px;
-  @media {
+  @media (max-width: 768px) {
     gap: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -32,7 +32,7 @@ const Cift = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 15px;
-  @media {
+  @media (max-width: 768px) {
     gap: 0.5rem;
   }
 `;

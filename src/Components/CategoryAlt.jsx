@@ -16,7 +16,7 @@ const CategoryAltMain = styled.main`
   font-size: 0.7rem;
   font-weight: bold;
   font-family: Roboto Condensed;
-  @media {
+  @media (max-width: 768px) {
     gap: 10px;
   }
 `;
@@ -29,7 +29,7 @@ const CategoryAltDetail = styled.div`
   border-radius: 20px;
   color: black;
   width: 100px;
-  @media {
+  @media (max-width: 768px) {
     padding: 0;
   }
 `;
@@ -42,7 +42,7 @@ const CategoryAltDetail2 = styled.div`
   border-radius: 20px;
   color: white;
   width: 100px;
-  @media {
+  @media (max-width: 768px) {
     padding: 0;
   }
 `;

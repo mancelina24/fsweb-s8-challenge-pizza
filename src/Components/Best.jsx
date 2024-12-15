@@ -12,6 +12,14 @@ const Container = styled.div`
   background-color: #faf7f2;
   gap: 25px;
   padding: 20px 0 70px 0;
+
+  @media (max-width: 768px) {
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 10px;
+  }
 `;
 const BestUrun = styled.div`
   background-color: white;
@@ -20,6 +28,13 @@ const BestUrun = styled.div`
   text-align: left;
   font-family:Barlow
   padding:0 10px;
+
+   @media (max-width: 768px) {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  scroll-snap-align: end;
+  width: 60%;
+  } 
 
 `;
 const Detail = styled.span`
