@@ -1,15 +1,15 @@
-import icon1 from "../../Assets/Iteration-2-aseets/footer/icons/icon1.png";
-import icon2 from "../../Assets/Iteration-2-aseets/footer/icons/icon2.png";
-import icon3 from "../../Assets/Iteration-2-aseets/footer/icons/icon3.png";
-import li0 from "../../Assets/Iteration-2-aseets/footer/insta/li0.png";
-import li1 from "../../Assets/Iteration-2-aseets/footer/insta/li1.png";
-import li2 from "../../Assets/Iteration-2-aseets/footer/insta/li2.png";
-import li3 from "../../Assets/Iteration-2-aseets/footer/insta/li3.png";
-import li4 from "../../Assets/Iteration-2-aseets/footer/insta/li4.png";
-import li5 from "../../Assets/Iteration-2-aseets/footer/insta/li5.png";
+import icon1 from "../assets/Iteration-2-aseets/footer/icons/icon1.png";
+import icon2 from "../assets/Iteration-2-aseets/footer/icons/icon2.png";
+import icon3 from "../assets/Iteration-2-aseets/footer/icons/icon3.png";
+import li0 from "../assets/Iteration-2-aseets/footer/insta/li0.png";
+import li1 from "../assets/Iteration-2-aseets/footer/insta/li1.png";
+import li2 from "../assets/Iteration-2-aseets/footer/insta/li2.png";
+import li3 from "../assets/Iteration-2-aseets/footer/insta/li3.png";
+import li4 from "../assets/Iteration-2-aseets/footer/insta/li4.png";
+import li5 from "../assets/Iteration-2-aseets/footer/insta/li5.png";
+import logofooter from "../assets/Iteration-2-aseets/footer/logofooter.svg";
 import "../App.css";
 import React from "react";
-import logofooter from "../../Assets/Iteration-2-aseets/footer/logofooter.svg";
 
 const Footer = () => {
   return (

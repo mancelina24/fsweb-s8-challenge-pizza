@@ -1,7 +1,7 @@
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import kart1 from "../../Assets/Iteration-2-aseets/cta/kart1.png";
-import kart2 from "../../Assets/Iteration-2-aseets/cta/kart2.png";
-import kart3 from "../../Assets/Iteration-2-aseets/cta/kart3.png";
+import { useHistory } from "react-router-dom";
+import kart1 from "../assets/Iteration-2-aseets/cta/kart1.png";
+import kart2 from "../assets/Iteration-2-aseets/cta/kart2.png";
+import kart3 from "../assets/Iteration-2-aseets/cta/kart3.png";
 import styled from "styled-components";
 
 const BannerMain = styled.div`

@@ -1,9 +1,9 @@
-import a1 from "../../Assets/Iteration-2-aseets/icons/a1.svg";
-import a2 from "../../Assets/Iteration-2-aseets/icons/a2.svg";
-import a3 from "../../Assets/Iteration-2-aseets/icons/a3.svg";
-import a4 from "../../Assets/Iteration-2-aseets/icons/a4.svg";
-import a5 from "../../Assets/Iteration-2-aseets/icons/a5.svg";
-import a6 from "../../Assets/Iteration-2-aseets/icons/a6.svg";
+import a1 from "../assets/Iteration-2-aseets/icons/a1.svg";
+import a2 from "../assets/Iteration-2-aseets/icons/a2.svg";
+import a3 from "../assets/Iteration-2-aseets/icons/a3.svg";
+import a4 from "../assets/Iteration-2-aseets/icons/a4.svg";
+import a5 from "../assets/Iteration-2-aseets/icons/a5.svg";
+import a6 from "../assets/Iteration-2-aseets/icons/a6.svg";
 import styled from "styled-components";
 
 const CategoryAltMain = styled.main`

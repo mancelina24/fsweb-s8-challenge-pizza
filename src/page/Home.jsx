@@ -50,6 +50,7 @@ const Home = () => {
               textAlign: "center",
               marginTop: "0",
               marginBottom: "10px",
+              marginRight: "10px",
             }}
           >
             Acıktıran Kodlara Doyuran Lezzetler

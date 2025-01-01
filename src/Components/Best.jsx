@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import food1 from "../../Assets/Iteration-2-aseets/pictures/food1.png";
-import food2 from "../../Assets/Iteration-2-aseets/pictures/food2.png";
-import food3 from "../../Assets/Iteration-2-aseets/pictures/food3.png";
+import food1 from "../assets/Iteration-2-aseets/pictures/food1.png";
+import food2 from "../assets/Iteration-2-aseets/pictures/food2.png";
+import food3 from "../assets/Iteration-2-aseets/pictures/food3.png";
 import { useHistory } from "react-router-dom";
 
 const Container = styled.div`
@@ -15,28 +15,28 @@ const Container = styled.div`
 
   @media (max-width: 768px) {
     display: flex;
-    overflow: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    gap: 10px;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 `;
 const BestUrun = styled.div`
   background-color: white;
   margin=20px
   align-items: center;
-  text-align: left;
+  text-align: center;
   font-family:Barlow
   padding:0 10px;
 
    @media (max-width: 768px) {
+   display:flex
+   justify-content: center;
   flex: 0 0 auto;
   margin-right: 10px;
-  scroll-snap-align: end;
-  width: 60%;
-  } 
+  width: 90%;
 
+  } 
 `;
+
 const Detail = styled.span`
   display: flex;
   justify-content: space-between;
