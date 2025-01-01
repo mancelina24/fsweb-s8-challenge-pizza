@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import "../App.css";
 import "../css/orderform.css";
 import data from "../assets/data";
@@ -174,7 +174,16 @@ const OrderForm = () => {
         console.error("Sipariş gönderilirken bir hata oluştu!", error);
       });
   };
-
+  const [hizliSiparis, setHizliSiparis] = useState(false);
+  const handleHizliSiparisChange = (e) => {
+    const checked = e.target.checked;
+    setHizliSiparis(checked);
+    if (checked) {
+      setToplamTutar((prevToplamTutar) => prevToplamTutar + 50);
+    } else {
+      setToplamTutar((prevToplamTutar) => prevToplamTutar - 50);
+    }
+  };
   return (
     <>
       <Header />
@@ -280,6 +289,13 @@ const OrderForm = () => {
           </div>
         </div>
         <div class="main_isim">
+          <h3>Hızlı Sipariş 50₺</h3>
+          <Checkbox
+            handleCheckChange={handleHizliSiparisChange}
+            isCheck={hizliSiparis}
+          />
+        </div>
+        <div class="main_isim">
           <h3>İsim</h3>
           <input
             class="isim"
@@ -335,6 +351,10 @@ const OrderForm = () => {
             <div class="secimler">
               <h4>Seçimler</h4>
               <p>{malzemeTutar}₺</p>
+            </div>
+            <div class="secimler">
+              <h4>Hızlı Sipariş</h4>
+              <p>{hizliSiparis ? "50₺" : "0₺"}</p>
             </div>
             <div class="toplamtutar">
               <h4>Toplam</h4>

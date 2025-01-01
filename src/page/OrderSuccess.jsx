@@ -2,6 +2,7 @@ import React from "react";
 import "../css/ordersuccess.css";
 import Header from "../Components/Header";
 import { useLocation } from "react-router-dom";
+import Footer from "../Components/Footer";
 
 const OrderSuccess = () => {
   const location = useLocation();
@@ -58,6 +59,7 @@ const OrderSuccess = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

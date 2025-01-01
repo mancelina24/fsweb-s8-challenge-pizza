@@ -7,10 +7,9 @@ import li2 from "../../Assets/Iteration-2-aseets/footer/insta/li2.png";
 import li3 from "../../Assets/Iteration-2-aseets/footer/insta/li3.png";
 import li4 from "../../Assets/Iteration-2-aseets/footer/insta/li4.png";
 import li5 from "../../Assets/Iteration-2-aseets/footer/insta/li5.png";
-import logofooter from "../../Assets/Iteration-2-aseets/footer/logofooter.svg";
-
 import "../App.css";
 import React from "react";
+import logofooter from "../../Assets/Iteration-2-aseets/footer/logofooter.svg";
 
 const Footer = () => {
   return (
@@ -32,7 +31,7 @@ const Footer = () => {
           </div>
         </address>
         <div class="menu">
-          <h3>Sıccacık Munüler</h3>
+          <h3>Sıccacık Menüler</h3>
           <ul class="menuList">
             <li>Position Absolute Acı Burger</li>
             <li>Terminal Pizza</li>
