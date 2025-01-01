@@ -6,8 +6,15 @@ import Footer from "../Components/Footer";
 
 const OrderSuccess = () => {
   const location = useLocation();
-  const { isim, boyut, hamur, malzemeler, malzemeTutar, toplamTutar } =
-    location.state || {};
+  const {
+    isim,
+    boyut,
+    hamur,
+    malzemeler,
+    malzemeTutar,
+    toplamTutar,
+    hizliSiparis,
+  } = location.state || {};
   return (
     <>
       <Header />
@@ -49,6 +56,10 @@ const OrderSuccess = () => {
             <div className="secimlersuccess">
               <h4>Seçimler</h4>
               <p>{malzemeTutar}₺</p>
+            </div>
+            <div className="secimlersuccess">
+              <h4>Hızlı Sipariş</h4>
+              <p>{hizliSiparis ? "50₺" : "0₺"}</p>
             </div>
             <div className="toplam">
               <h4>Toplam</h4>
