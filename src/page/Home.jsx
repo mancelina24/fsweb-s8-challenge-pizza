@@ -8,6 +8,7 @@ import Banner from "../Components/Banner";
 import Best from "../Components/Best";
 import CategoryAlt from "../Components/CategoryAlt";
 import styled from "styled-components";
+import homebanner from "../assets/Iteration-1-assets/homebanner.png";
 
 const ArkaPlan = styled.div`
   background-color: #faf7f2;
@@ -29,7 +30,7 @@ const Home = () => {
     <>
       <Header />
       <ArkaPlan>
-        <div class="home">
+        <div class="home" style={{ backgroundImage: `url(${homebanner})` }}>
           <OzelYazi>fırsatı kaçırma!</OzelYazi>
           <h2>KOD ACIKTIRIR</h2>
           <h2>PİZZA, DOYURUR</h2>
